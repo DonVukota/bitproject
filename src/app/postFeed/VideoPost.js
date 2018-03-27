@@ -19,7 +19,7 @@ class VideoPost extends React.Component {
                         </div>
                         <div className="card-action">
                             <a href="#">Video Post</a>
-                            <a href="#">!!!count comments!!!</a>
+                            <a href="#">Comment count</a>
                         </div>
                     </div>
                 </div>
