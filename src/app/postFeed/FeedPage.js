@@ -45,6 +45,7 @@ class FeedPage extends React.Component {
                     } return <h1> LOADING... </h1>
 
                 })}
+                < CreatePostButton />
             </div>)
 
     }
