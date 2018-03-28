@@ -1,4 +1,5 @@
 import React, { Componenet } from 'react'
+import M from "materialize-css"
 
 class TextPost extends React.Component {
     constructor(props) {
@@ -6,9 +7,24 @@ class TextPost extends React.Component {
 
     }
 
+    componentDidMount() {
+        var floatButton = document.querySelector('.fixed-action-btn');
+        var buttonInstance = M.FloatingActionButton.init(floatButton);
+
+        var modalVideo = document.querySelector('#modalVideo');
+        var modalInstance = M.Modal.init(modalVideo);
+
+        var modalImage = document.querySelector('#modalImage');
+        var modalInstance = M.Modal.init(modalImage);
+
+        var modalPost = document.querySelector('#modalPost');
+        var modalInstance = M.Modal.init(modalPost);
+    }
+
     render() {
 
         return (
+
 
             <div class="row">
                 <div class="col s6 offset-s3">
@@ -20,15 +36,11 @@ class TextPost extends React.Component {
                         <div class="card-action">
                             <h6><span>{this.props.data.commentsNum}</span>comments... collapse...</h6>
 
+
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         )
     }
 
