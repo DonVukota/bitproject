@@ -26,7 +26,6 @@ class ViewPostDetails extends React.Component {
                         <InputComment />
 
 
-
                         <ul className="row">
                             <Comment />
 

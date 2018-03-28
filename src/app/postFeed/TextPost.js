@@ -14,13 +14,12 @@ class TextPost extends React.Component {
                 <div class="col s6 offset-s3">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
-                            <span class="card-title">Card Title</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                            <span class="card-title">{this.props.data.userDisplayName}</span>
+                            <p>{this.props.data.text}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">This is a link</a>
-                            <a href="#">This is a link</a>
+                            <h6><span>{this.props.data.commentsNum}</span>comments... collapse...</h6>
+
                         </div>
                     </div>
                 </div>
