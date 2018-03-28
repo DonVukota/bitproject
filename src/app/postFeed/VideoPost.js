@@ -21,6 +21,7 @@ class VideoPost extends React.Component {
 
                 <div className="videoPost">
 
+
                     <div className="col s6 offset-s3">
                         <div className="card blue-grey darken-1">
                             <div className="card-content white-text">
@@ -30,6 +31,7 @@ class VideoPost extends React.Component {
                                 <a href="#">{this.props.data.userDisplayName}</a>
                                 <h6><span>{this.props.data.commentsNum}</span>comments... collapse comments</h6>
                             </div>
+
                         </div>
                     </div>
 

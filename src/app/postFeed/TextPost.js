@@ -1,5 +1,9 @@
 import React, { Componenet } from 'react'
+
 import { Link } from 'react-router-dom'
+
+import M from "materialize-css"
+
 
 class TextPost extends React.Component {
     constructor(props) {
@@ -7,9 +11,24 @@ class TextPost extends React.Component {
 
     }
 
+    componentDidMount() {
+        var floatButton = document.querySelector('.fixed-action-btn');
+        var buttonInstance = M.FloatingActionButton.init(floatButton);
+
+        var modalVideo = document.querySelector('#modalVideo');
+        var modalInstance = M.Modal.init(modalVideo);
+
+        var modalImage = document.querySelector('#modalImage');
+        var modalInstance = M.Modal.init(modalImage);
+
+        var modalPost = document.querySelector('#modalPost');
+        var modalInstance = M.Modal.init(modalPost);
+    }
+
     render() {
 
         return (
+
             <Link to={`PostDetails/${this.props.data.id}/text`}>
                 <div class="row">
                     <div class="col s6 offset-s3">
@@ -26,6 +45,7 @@ class TextPost extends React.Component {
                     </div>
                 </div>
             </Link>
+
 
 
 

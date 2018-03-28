@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { VideoPost } from './VideoPost'
 import { TextPost } from './TextPost'
 import { ImagePost } from './ImagePost'
+
 import { getListOfLastPosts } from "../services/fetchListOfLastPosts"
+
+import { CreatePostButton } from '../partials/CreatePostButton';
+
 
 class FeedPage extends React.Component {
     constructor(props) {
@@ -30,6 +34,7 @@ class FeedPage extends React.Component {
 
 
             <div className=" container row">
+
                 {this.state.listOfLastPosts.map((postProperties) => {
                     if (postProperties.type === "video") {
                         return <VideoPost data={postProperties} />
@@ -41,6 +46,7 @@ class FeedPage extends React.Component {
 
                 })}
             </div>)
+
     }
 }
 
