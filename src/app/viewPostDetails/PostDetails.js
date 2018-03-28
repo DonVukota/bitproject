@@ -1,4 +1,4 @@
-import React, { Componenet } from 'react';
+import React, { Component } from 'react';
 import { VideoPost } from '../postFeed/VideoPost'
 import { TextPost } from '../postFeed/TextPost'
 import { ImagePost } from '../postFeed/ImagePost'

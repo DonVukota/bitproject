@@ -6,6 +6,9 @@ import { ImagePost } from './ImagePost'
 import { getListOfLastPosts } from "../services/fetchListOfLastPosts"
 
 import { CreatePostButton } from '../partials/CreatePostButton';
+import { fetchCreateVideoPost } from "../services/fetchCreateVideoPost"
+import { fetchCreateImagePost } from '../services/fetchCreateImagePost'
+import { fetchCreateTextPost } from '../services/fetchCreateTextPost'
 
 
 class FeedPage extends React.Component {
@@ -21,17 +24,34 @@ class FeedPage extends React.Component {
             .then((fetchedData) => {
                 this.setState({
                     listOfLastPosts: fetchedData
+
                 })
             })
+        console.log('sfasfafas')
     }
     componentDidMount() {
         this.getFeedData()
     }
 
+    createPost = (postInputData) => {
+        if (postInputData.type === 'video') {
+            fetchCreateVideoPost(postInputData)
+            this.getFeedData();
+        } else if (postInputData.type === 'image') {
+            fetchCreateImagePost(postInputData)
+            this.getFeedData()
+        } else if (postInputData.type === 'text') {
+            fetchCreateTextPost(postInputData)
+            this.getFeedData()
+        }
+
+        // console.log(postInputData);
+        // user fetch service to create post
+        // fetch new post list (refresh list not page!!!!)
+    }
+
     render() {
         return (
-
-
 
             <div className=" container row">
 
@@ -45,7 +65,8 @@ class FeedPage extends React.Component {
                     } return <h1> LOADING... </h1>
 
                 })}
-                < CreatePostButton />
+
+                <CreatePostButton onCreatePost={this.createPost} />
             </div>)
 
     }
@@ -54,15 +75,3 @@ class FeedPage extends React.Component {
 export {
     FeedPage
 }
-
-// posts = [{type:"img"},{type:"vid"},{type:"text"}]
-
-// renderPost = () =? {
-//     if props.type === img 
-//         return ImagePost
-// }
-
-
-// PostItem = () => (div
-//     renderPost()
-//     div)
