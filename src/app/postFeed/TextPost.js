@@ -39,7 +39,7 @@ class TextPost extends React.Component {
                         </div>
                     </div>
                 </div>
-
+                {/* BUTTONS AND MODALS */}
                 <div className="fixed-action-btn horizontal click-to-toggle">
                     <a className="btn-floating btn-large red">
                         <i className="large material-icons">mode_edit</i>
@@ -51,37 +51,67 @@ class TextPost extends React.Component {
                     </ul>
                 </div>
 
-
+                {/* VIDEO MODAL */}
                 <div id="modalVideo" className="modal">
                     <div className="modal-content">
                         <h4>New Video Post</h4>
-                        <p>imput post:</p>
+                        <div className="row">
+                            <form className="col s12">
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <label for="textarea1">URL</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
                     </div>
-
-
                 </div>
 
+                {/* IMAGE MODAL */}
                 <div id="modalImage" className="modal">
                     <div className="modal-content">
                         <h4>New Image Post</h4>
-                        <p>b</p>
+                        <div className="row">
+                            <form className="col s12">
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <label for="textarea1">URL</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
                     </div>
                 </div>
 
+                {/* POST MODAL */}
                 <div id="modalPost" className="modal">
                     <div className="modal-content">
                         <h4>New Post</h4>
-                        <p>imput post</p>
+                        <div className="row">
+                            <form className="col s12">
+                                <div className="row">
+                                    <div className="input-field col s12">
+                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <label for="textarea1">What's up?</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
-                    
+
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
                     </div>
                 </div>
 
