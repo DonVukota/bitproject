@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
@@ -7,7 +7,7 @@ const Header = () => {
                 <div className="nav-wrapper">
                     <a className="brand-logo">BitBook</a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to='/feed'>Feed</Link></li>
+                        <li><Link to='/'>Feed</Link></li>
                         <li><Link to='/People'>People</Link></li>
                         <li><Link to='/Profile'>Profile</Link></li>
                     </ul>

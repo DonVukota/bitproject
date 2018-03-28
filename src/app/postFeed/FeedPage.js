@@ -3,16 +3,16 @@ import { VideoPost } from './VideoPost'
 import { TextPost } from './TextPost'
 import { ImagePost } from './ImagePost'
 
-class FeedPage extends React.Component{
-    constructor(props){
+class FeedPage extends React.Component {
+    constructor(props) {
         super(props);
 
     }
 
-    render () {
+    render() {
         return (
-        <div className="row">
-        
+
+            <div className=" container row">
                 <VideoPost />
                 <TextPost />
                 <ImagePost />
