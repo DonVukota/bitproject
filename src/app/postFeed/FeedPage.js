@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { VideoPost } from './VideoPost'
 import { TextPost } from './TextPost'
 import { ImagePost } from './ImagePost'
+import { CreatePostButton } from '../partials/CreatePostButton';
 
 class FeedPage extends React.Component {
     constructor(props) {
@@ -16,7 +17,9 @@ class FeedPage extends React.Component {
                 <VideoPost />
                 <TextPost />
                 <ImagePost />
-            </div>)
+                <CreatePostButton />
+            </div>
+        )
     }
 }
 
