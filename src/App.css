@@ -27,3 +27,24 @@
   to { transform: rotate(360deg); }
 }
 
+.profileCard {
+margin-top: 4%;
+}
+.profileImg{
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+}
+
+.aboutSection {
+  background-color: white;
+  z-index: 1;
+  margin: 0;
+  padding: 10px;
+  
+}
+.bla{
+  border: 1px solid palevioletred;
+  border-radius: 25px;
+  margin-bottom: 1%;
+}
