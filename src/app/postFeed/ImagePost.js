@@ -1,4 +1,5 @@
 import React, { Componenet } from 'react'
+import { Link } from 'react-router-dom'
 
 class ImagePost extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class ImagePost extends React.Component {
     render() {
 
         return (
-
+<Link to={`PostDetails/${this.props.data.id}/image`}>
             <div className="videoPost">
 
                 <div className="col s6 offset-s3">
@@ -26,7 +27,7 @@ class ImagePost extends React.Component {
 
             </div>
 
-
+</Link>
 
 
 

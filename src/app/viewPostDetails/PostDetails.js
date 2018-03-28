@@ -4,6 +4,9 @@ import { TextPost } from '../postFeed/TextPost'
 import { ImagePost } from '../postFeed/ImagePost'
 import { Comment } from "./Comment"
 import { InputComment } from './InputComment'
+import { VideoSinglePost } from "./VideoSinglePost"
+import { TextSinglePost } from "./TextSinglePost"
+import { ImageSinglePost } from "./ImageSinglePost"
 
 
 class ViewPostDetails extends React.Component {
@@ -11,7 +14,13 @@ class ViewPostDetails extends React.Component {
         super(props)
 
     }
-
+    checkType = () => {
+        if (this.props.match.params.type === "video") {
+            return < VideoSinglePost data={this.props.match.params.id} />
+        } else if (this.props.match.params.type === "text") {
+            return < TextSinglePost data={this.props.match.params.id} />
+        } else return <ImageSinglePost data={this.props.match.params.id} />
+    }
 
     render() {
 
@@ -20,20 +29,20 @@ class ViewPostDetails extends React.Component {
                 <div className="container">
                     <div className="row">
 
-                        {/* if type of post is... */}
-                        <VideoPost />
 
+
+                        {this.checkType()}
                         <InputComment />
-
 
                         <ul className="row">
                             <Comment />
 
 
                         </ul>
+
                     </div>
                 </div>
-            </main>
+            </main >
 
 
         )

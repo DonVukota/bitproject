@@ -18,7 +18,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/' component={FeedPage} />
-          <Route exact path='/PostDetails/' component={ViewPostDetails} />
+          <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
         </Switch>
         <Footer />
       </React.Fragment>
