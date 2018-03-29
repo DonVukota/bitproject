@@ -28,31 +28,16 @@ class ViewPostDetails extends React.Component {
             <main>
                 <div className="container">
                     <div className="row">
-
-
-
                         {this.checkType()}
                         <InputComment />
-
                         <ul className="row">
                             <Comment />
-
-
                         </ul>
-
                     </div>
                 </div>
             </main >
-
-
         )
-
-
-
     }
-
-
-
 }
 
 export {
