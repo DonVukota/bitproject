@@ -3,20 +3,13 @@ import '../../App.css';
 
 const Footer = () => {
     return (
-        <footer className="page-footer">
-            <div className='footer'>
-                <div className="container ">
-                    <div className="row">
-                    </div>
-                </div>
-                <div className="footer-copyright">
-                    <div className="container team">
-                        © 2018 Copyright by: Team69
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+        <footer class="page-footer">
+    
+          <div class="container">
+          © 2018 Copyright : Team69
+          
+        </div>
+      </footer>
     )
 }
 export { Footer };

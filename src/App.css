@@ -55,6 +55,7 @@ box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
   border: 3px solid rgb(4, 204, 47);
   border-radius: 25px;
   margin-bottom: 1%;
+
 }
 .commentCard{
   background: rgba(160, 160, 160, 0.2)
@@ -66,6 +67,7 @@ box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
 }
 .footer{
   background-color: rgb(4, 204, 47);
+  background-image: url("https://wallpaperscraft.com/image/grass_lawn_green_22661_3840x2160.jpg");
   
 }
 .videoCard{
@@ -78,7 +80,7 @@ box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
   margin-top: 20px;
 }
 .card{
-  background-color: rgba(148, 151, 149, 0.904)!important;
+  background-color: #424342!important;
   -webkit-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
 -moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
 box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
@@ -88,6 +90,7 @@ box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
 }
 a{
   color: rgb(3, 221, 3)!important;
+  
 }
 #logoc, #peoplec, #profilec, #feedc{
 color: white!important;
