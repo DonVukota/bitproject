@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import M from "materialize-css"
 
 class CreatePostButton extends React.Component {
@@ -7,7 +7,8 @@ class CreatePostButton extends React.Component {
 
         this.state = {
             value: "",
-            type: ""
+            type: "",
+            error: ""
         }
     }
 
@@ -41,14 +42,23 @@ class CreatePostButton extends React.Component {
                 this.props.onCreatePost(postData)
 
             } else {
-                alert("Video Link is not Valid!!!")
+                this.setState({
+                    error: "Video Link is invalid",
+                    value: ""
+                })
             }
+        } else {
+            this.setState({
+                error: "Video Link is invalid",
+                value: ""
+            })
         }
     }
 
     checkImageUrl = (postData) => {
+        // const extensions = ["jpg", "gif", ""]
         let checkValueExtension = postData.value.slice(postData.value.length - 3, postData.value.length)
-        if (checkValueExtension === "jpg") {
+        if (checkValueExtension === "jpg" || checkValueExtension === "gif" || checkValueExtension === "png" || checkValueExtension === "bpm" || checkValueExtension === "JPG" || checkValueExtension === "GIF" || checkValueExtension === "PNG" || checkValueExtension === "BPM") {
             this.props.onCreatePost(postData)
         } else {
             alert("Image link not Support!!!")
@@ -111,8 +121,9 @@ class CreatePostButton extends React.Component {
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
-                                        <label forHtml="textarea1" value="iuygigiug" >URL</label>
+                                        <label htmlFor="textarea1" value="iuygigiug" >URL</label>
                                     </div>
+                                    <p> {this.state.error}</p>
                                 </div>
                             </form>
                         </div>
@@ -132,7 +143,7 @@ class CreatePostButton extends React.Component {
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <textarea onChange={this.onValueChange} value={this.state.value} data-type="image" className="materialize-textarea"></textarea>
-                                        <label forHtml="textarea1">URL</label>
+                                        <label htmlFor="textarea1">URL</label>
                                     </div>
                                 </div>
                             </form>
@@ -153,7 +164,7 @@ class CreatePostButton extends React.Component {
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <textarea onChange={this.onValueChange} value={this.state.value} data-type="text" className="materialize-textarea"></textarea>
-                                        <label forHtml="textarea1">What's up?</label>
+                                        <label htmlFor="textarea1">What's up?</label>
                                     </div>
                                 </div>
                             </form>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { VideoPost } from './VideoPost'
 import { TextPost } from './TextPost'
 import { ImagePost } from './ImagePost'
@@ -34,16 +34,16 @@ class FeedPage extends React.Component {
 
     createPost = (postInputData) => {
         if (postInputData.type === 'video') {
-            fetchCreateVideoPost(postInputData)
+            fetchCreateVideoPost(postInputData).then(() => this.getFeedData());
             // .then(this.getFeedData());
         } else if (postInputData.type === 'image') {
-            fetchCreateImagePost(postInputData)
+            fetchCreateImagePost(postInputData).then(() => this.getFeedData());
             // .then(this.getFeedData())
         } else if (postInputData.type === 'text') {
-            fetchCreateTextPost(postInputData)
+            fetchCreateTextPost(postInputData).then(() => this.getFeedData());
             // .then(this.getFeedData())
         }
-        this.getFeedData()
+
         // location.replace("http://localhost:3000/#/")
 
         // console.log(postInputData);
@@ -56,13 +56,13 @@ class FeedPage extends React.Component {
 
             <div className=" container row">
 
-                {this.state.listOfLastPosts.map((postProperties) => {
+                {this.state.listOfLastPosts.map((postProperties, index) => {
                     if (postProperties.type === "video") {
-                        return <VideoPost data={postProperties} />
+                        return <VideoPost data={postProperties} key={index} />
                     } else if (postProperties.type === "image") {
-                        return <ImagePost data={postProperties} />
+                        return <ImagePost data={postProperties} key={index} />
                     } else if (postProperties.type === "text") {
-                        return <TextPost data={postProperties} />
+                        return <TextPost data={postProperties} key={index} />
                     } return <h1> LOADING... </h1>
 
                 })}

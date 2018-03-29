@@ -1,11 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 class ImagePost extends React.Component {
-    constructor(props) {
-        super(props)
 
-    }
 
     render() {
 
@@ -17,10 +14,10 @@ class ImagePost extends React.Component {
                         <div className="card blue-grey darken-1">
                             <div className="card-content white-text">
 
-                                <img width="100%" src={this.props.data.imageUrl} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></img>
+                                <img width="100%" src={this.props.data.imageUrl} frameBorder="0" allow="autoplay; encrypted-media" alt=' is not valid .|.' allowFullScreen></img>
                             </div>
                             <div className="card-action row">
-                                <a href="#">{this.props.data.userDisplayName}</a>
+                                <p>{this.props.data.userDisplayName}</p>
                                 <p><span>{this.props.data.commentsNum}</span> Comments...</p>
 
                             </div>
