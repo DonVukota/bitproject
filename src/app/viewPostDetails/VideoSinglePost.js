@@ -52,7 +52,7 @@ class VideoSinglePost extends React.Component {
 
 
                 <div className="col s6 offset-s3">
-                    <div className="card blue-grey darken-1">
+                    <div className="card ">
                         <div className="card-content white-text">
                             <iframe width="100%" height="315" src={this.changeVideoUrl(this.state.videoUrl)} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>

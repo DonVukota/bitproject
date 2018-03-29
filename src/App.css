@@ -29,6 +29,14 @@
 
 .profileCard {
 margin-top: 4%;
+width: 50%;
+position: absolute;
+left: 22%;
+background-color: white;
+-webkit-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
+-moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
+box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
+
 }
 .profileImg{
   width: 250px;
@@ -44,7 +52,108 @@ margin-top: 4%;
   
 }
 .bla{
-  border: 1px solid palevioletred;
+  border: 3px solid rgb(4, 204, 47);
   border-radius: 25px;
   margin-bottom: 1%;
 }
+.commentCard{
+  background: rgba(160, 160, 160, 0.2)
+}
+.headCss{
+  background-image: url("https://wallpaperscraft.com/image/grass_lawn_green_22661_3840x2160.jpg");
+  background-color: rgb(4, 204, 47);
+  margin-bottom: 2%;
+}
+.footer{
+  background-color: rgb(4, 204, 47);
+  
+}
+.videoCard{
+  margin-top: 10px;
+}
+.imageCard{
+  margin-top: 10px;
+}
+.postCard{
+  margin-top: 20px;
+}
+.card{
+  background-color: rgba(148, 151, 149, 0.904)!important;
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+-moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+}
+.card-action{
+  color: greenyellow;
+}
+a{
+  color: rgb(3, 221, 3)!important;
+}
+#logoc, #peoplec, #profilec, #feedc{
+color: white!important;
+margin: 0px 20px;
+}
+.commentBox{
+  margin-top: 7%;
+  background-color: white;
+  height: 70%;
+  padding: 15px!important;
+  background-color: rgba(255, 255, 255, 0.925)!important;
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+-moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+}
+.commentAvatar{
+  margin-top: 20%;
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+-moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+box-shadow: 6px 7px 25px -5px rgba(15,15,15,1)!important;
+}
+.avatarName{
+position: relative;
+padding-top: 20%;
+color: white;
+left: 10%;
+top:50px;
+
+}
+
+.sendButton {
+  color: white;
+  position: relative;
+  
+}
+
+.buttonForm {
+  position: relative;
+  top: 50px;
+  left: 100%;
+  background-color: rgb(3, 221, 3)!important;
+ 
+
+}
+.postCommentBox{
+  color: white!important;
+  border: 1px solid grey;
+  -webkit-box-shadow: inset 0px 0px 53px -16px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 0px 53px -16px rgba(0,0,0,1);
+  box-shadow: inset 0px 0px 53px -16px rgba(0,0,0,1);
+  padding: 2%;
+  position: relative;
+  
+ 
+}
+.abcd{
+  padding: 2%;
+  background-color: grey;
+  left: 18%;
+  position: relative;
+  width: 100%;
+
+  
+}
+
+.textColor {
+  color: white;
+}
+

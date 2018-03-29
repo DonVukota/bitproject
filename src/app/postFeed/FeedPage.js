@@ -33,8 +33,8 @@ class FeedPage extends React.Component {
 
 
 
-            <div className=" container row">
-
+            <div className=" container mainFeed ">
+                <div className="row">
                 {this.state.listOfLastPosts.map((postProperties, index) => {
                     if (postProperties.type === "video") {
                         return <VideoPost data={postProperties} key={index} />
@@ -46,6 +46,7 @@ class FeedPage extends React.Component {
 
                 })}
                 < CreatePostButton />
+                </div>
             </div>)
 
     }

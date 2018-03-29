@@ -1,10 +1,10 @@
 import React from 'react';
-
 import { Comment } from "./Comment"
 import { InputComment } from './InputComment'
 import { VideoSinglePost } from "./VideoSinglePost"
 import { TextSinglePost } from "./TextSinglePost"
 import { ImageSinglePost } from "./ImageSinglePost"
+
 
 
 class ViewPostDetails extends React.Component {
@@ -24,7 +24,7 @@ class ViewPostDetails extends React.Component {
 
         return (
             <main>
-                <div className="container">
+                <div className="container mainFeed">
                     <div className="row">
 
 

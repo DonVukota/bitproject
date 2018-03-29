@@ -48,8 +48,8 @@ class MyProfilePage extends React.Component {
                         <div className="bla" > <p className="aboutSection">{this.state.aboutShort}</p></div>
                     </div>
                     <div className="row">
-                        <div className="forum"> <i className="material-icons">forum</i><p className="postComment">Number of posts :{this.state.postsCount}</p></div>
-                        <div className="comment"> <i className="material-icons">comment</i><p className="CommentNumber">Number of comments :{this.state.commentsCount}</p></div>
+                        <div className="forum"> <i className="material-icons">forum</i><p className="postComment">Number of posts: {this.state.postsCount}</p></div>
+                        <div className="comment"> <i className="material-icons">comment</i><p className="CommentNumber">Number of comments: {this.state.commentsCount}</p></div>
                     </div></div>
 
             </main>

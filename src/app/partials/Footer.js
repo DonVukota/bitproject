@@ -5,12 +5,12 @@ const Footer = () => {
     return (
         <footer className="page-footer">
             <div className='footer'>
-                <div className="container">
+                <div className="container ">
                     <div className="row">
                     </div>
                 </div>
                 <div className="footer-copyright">
-                    <div className="container">
+                    <div className="container team">
                         © 2018 Copyright by: Team69
                     </div>
                 </div>
