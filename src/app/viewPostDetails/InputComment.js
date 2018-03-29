@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class InputComment extends React.Component {
-    constructor(props) {
-        super(props)
 
-
-    }
 
     render() {
 
         return (
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6 offset-s2">
-                            <i class="material-icons prefix"></i>
-                            <textarea id="icon_prefix2" class="materialize-textarea" placeholder="Enter your comment..."></textarea>
+            <div className="row">
+                <form className="col s12">
+                    <div className="row">
+                        <div className="input-field col s6 offset-s2">
+                            <i className="material-icons prefix"></i>
+                            <textarea id="icon_prefix2" className="materialize-textarea" placeholder="Enter your comment..."></textarea>
 
 
                         </div>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">
-                            <i class="material-icons right ">Luka</i></button>
+                        <button className="btn waves-effect waves-light" type="submit" name="action">
+                            <i className="material-icons right ">Luka</i></button>
                     </div>
                 </form>
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getSingleTextPost } from "../services/fetchSingleTextPost"
 
 class TextSinglePost extends React.Component {
