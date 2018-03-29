@@ -1,7 +1,5 @@
-import React, { Componenet } from 'react';
-import { VideoPost } from '../postFeed/VideoPost'
-import { TextPost } from '../postFeed/TextPost'
-import { ImagePost } from '../postFeed/ImagePost'
+import React from 'react';
+
 import { Comment } from "./Comment"
 import { InputComment } from './InputComment'
 import { VideoSinglePost } from "./VideoSinglePost"

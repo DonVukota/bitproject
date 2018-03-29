@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getSingleVideoPost } from "../services/fetchSingleVideoPost"
 
 class VideoSinglePost extends React.Component {
@@ -57,7 +57,7 @@ class VideoSinglePost extends React.Component {
                             <iframe width="100%" height="315" src={this.changeVideoUrl(this.state.videoUrl)} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                         <div className="card-action">
-                            <a href="#">{this.state.userDisplayName}</a>
+                            <a >{this.state.userDisplayName}</a>
                             <h6><span>{this.state.commentsNum}</span>comments... collapse comments</h6>
                         </div>
                     </div>
