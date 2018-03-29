@@ -27,7 +27,6 @@ class FeedPage extends React.Component {
 
                 })
             })
-        console.log('sfasfafas')
     }
     componentDidMount() {
         this.getFeedData()
@@ -36,14 +35,16 @@ class FeedPage extends React.Component {
     createPost = (postInputData) => {
         if (postInputData.type === 'video') {
             fetchCreateVideoPost(postInputData)
-            this.getFeedData();
+            // .then(this.getFeedData());
         } else if (postInputData.type === 'image') {
             fetchCreateImagePost(postInputData)
-            this.getFeedData()
+            // .then(this.getFeedData())
         } else if (postInputData.type === 'text') {
             fetchCreateTextPost(postInputData)
-            this.getFeedData()
+            // .then(this.getFeedData())
         }
+        this.getFeedData()
+        // location.replace("http://localhost:3000/#/")
 
         // console.log(postInputData);
         // user fetch service to create post

@@ -25,15 +25,49 @@ class CreatePostButton extends React.Component {
         M.Modal.init(modalPost);
     }
 
+    checkVideoUrl = (postData) => {
+        let checkStringValueWatch = postData.value.slice(23, 32)
+        let checkStringValueEmbed = postData.value.slice(23 - 30)
+        let watchAfter = postData.value.slice(32, postData.value.length)
+        let embedAfter = postData.value.slice(30, postData.value.length)
+
+        let checkValueFirstPart = postData.value.slice(0, 23);
+
+        if (checkValueFirstPart === "https://www.youtube.com") {
+            if (checkStringValueWatch === '/watch?v=' && watchAfter.length === 11) {
+                this.props.onCreatePost(postData)
+
+            } else if (checkStringValueEmbed === "/embed/" && embedAfter.length === 11) {
+                this.props.onCreatePost(postData)
+
+            } else {
+                alert("Video Link is not Valid!!!")
+            }
+        }
+    }
+
+    checkImageUrl = (postData) => {
+        let checkValueExtension = postData.value.slice(postData.value.length - 3, postData.value.length)
+        if (checkValueExtension === "jpg") {
+            this.props.onCreatePost(postData)
+        } else {
+            alert("Image link not Support!!!")
+        }
+    }
+
+
     createPost = (event) => {
         event.preventDefault();
 
         const postData = {
             value: this.state.value,
-            type: this.state.type
+            type: this.state.type,
         }
-
-        this.props.onCreatePost(postData);
+        if (postData.type === "video") {
+            this.checkVideoUrl(postData)
+        } else if (postData.type === "image") {
+            this.checkImageUrl(postData)
+        }
 
         this.setState({
             value: "",
@@ -49,6 +83,8 @@ class CreatePostButton extends React.Component {
     }
 
 
+    // https://www.youtube.com/watch?v=-f57lF0pKSA
+    // https://www.youtube.com/embed/7wtfhZwyrcc
     render() {
 
         return (
