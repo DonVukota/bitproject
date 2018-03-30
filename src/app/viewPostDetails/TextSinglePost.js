@@ -53,7 +53,9 @@ class TextSinglePost extends React.Component {
                             <p>{this.state.text}</p>
                         </div>
                         <div className="card-action">
+
                             <h6><span>{this.state.commentsNum}</span> comments... collapse...</h6>
+
 
                         </div>
                     </div>

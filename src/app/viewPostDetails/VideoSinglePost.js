@@ -54,11 +54,12 @@ class VideoSinglePost extends React.Component {
                 <div className="col s6 offset-s3">
                     <div className="card ">
                         <div className="card-content white-text">
-                            <iframe width="100%" height="315" src={this.changeVideoUrl(this.state.videoUrl)} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src={this.changeVideoUrl(this.state.videoUrl)} frameborder="0" title="youtube video" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                         <div className="card-action">
                             <a >{this.state.userDisplayName}</a>
                             <h6><span>{this.state.commentsNum}</span> comments... collapse comments</h6>
+
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
-export const getListOfLastPosts = () => {
-    return fetch("http://bitbookapi.azurewebsites.net/api/Posts", {
+export const getCommentsByPostId = (postId) => {
+    return fetch(`http://bitbookapi.azurewebsites.net/api/Comments?postId=${postId}`, {
         headers: {
             "Content-Type": "application/json",
             "Key": "bitbook",

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 
 class VideoPost extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     changeVideoUrl = (inputUrl) => {
         let embededUrl = inputUrl.replace("watch?v=", "embed/")
@@ -25,7 +25,7 @@ class VideoPost extends React.Component {
                     <div className="col s6 offset-s3">
                         <div className="card ">
                             <div className="card-content white-text videoCard">
-                                <iframe width="100%" height="315" src={this.changeVideoUrl(this.props.data.videoUrl)} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                                <iframe width="100%" height="315" src={this.changeVideoUrl(this.props.data.videoUrl)} title="youtube video" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                             </div>
                             <div className="card-action">
                                 <a href="#">{this.props.data.userDisplayName}</a>

@@ -8,10 +8,6 @@ import { ImageSinglePost } from "./ImageSinglePost"
 
 
 class ViewPostDetails extends React.Component {
-    constructor(props) {
-        super(props)
-
-    }
     checkType = () => {
         if (this.props.match.params.type === "video") {
             return < VideoSinglePost data={this.props.match.params.id} />
@@ -21,36 +17,20 @@ class ViewPostDetails extends React.Component {
     }
 
     render() {
-
         return (
             <main>
                 <div className="container mainFeed">
                     <div className="row">
-
-
-
                         {this.checkType()}
                         <InputComment />
-
                         <ul className="row">
-                            <Comment />
-
-
+                            <Comment postId={this.props.match.params.id} />
                         </ul>
-
                     </div>
                 </div>
             </main >
-
-
         )
-
-
-
     }
-
-
-
 }
 
 export {

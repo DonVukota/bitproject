@@ -2,12 +2,67 @@ import React from 'react'
 import M from "materialize-css"
 
 class CreatePostButton extends React.Component {
-
-
+        this.state = {
+            value: "",
+            type: "",
+            error: ""
+        }
+    }
 
     componentDidMount() {
-        var floatButton = document.querySelector('.fixed-action-btn');
-        var buttonInstance = M.FloatingActionButton.init(floatButton);
+        const floatButton = document.querySelector('.fixed-action-btn');
+        const buttonInstance = M.FloatingActionButton.init(floatButton);
+
+        const modalVideo = document.querySelector('#modalVideo');
+        M.Modal.init(modalVideo);
+
+        const modalImage = document.querySelector('#modalImage');
+        M.Modal.init(modalImage);
+
+        const modalPost = document.querySelector('#modalPost');
+        M.Modal.init(modalPost);
+    }
+
+    checkVideoUrl = (postData) => {
+        let checkStringValueWatch = postData.value.slice(23, 32)
+        let checkStringValueEmbed = postData.value.slice(23 - 30)
+        let watchAfter = postData.value.slice(32, postData.value.length)
+        let embedAfter = postData.value.slice(30, postData.value.length)
+
+        let checkValueFirstPart = postData.value.slice(0, 23);
+
+        if (checkValueFirstPart === "https://www.youtube.com") {
+            if (checkStringValueWatch === '/watch?v=' && watchAfter.length === 11) {
+                this.props.onCreatePost(postData)
+
+            } else if (checkStringValueEmbed === "/embed/" && embedAfter.length === 11) {
+                this.props.onCreatePost(postData)
+
+            } else {
+                this.setState({
+                    error: "Video Link is invalid",
+                    value: ""
+                })
+            }
+        } else {
+            this.setState({
+                error: "Video Link is invalid",
+                value: ""
+            })
+        }
+    }
+
+    checkImageUrl = (postData) => {
+        // const extensions = ["jpg", "gif", ""]
+        let checkValueExtension = postData.value.slice(postData.value.length - 3, postData.value.length)
+        if (checkValueExtension === "jpg" || checkValueExtension === "gif" || checkValueExtension === "png" || checkValueExtension === "bpm" || checkValueExtension === "JPG" || checkValueExtension === "GIF" || checkValueExtension === "PNG" || checkValueExtension === "BPM") {
+            this.props.onCreatePost(postData)
+        } else {
+            alert("Image link not Support!!!")
+        }
+    }
+
+
 
         var modalVideo = document.querySelector('#modalVideo');
         var videoModalInstance = M.Modal.init(modalVideo);
@@ -17,13 +72,43 @@ class CreatePostButton extends React.Component {
 
         var modalPost = document.querySelector('#modalPost');
         var postModalInstance = M.Modal.init(modalPost);
+
+    createPost = (event) => {
+        event.preventDefault();
+
+        const postData = {
+            value: this.state.value,
+            type: this.state.type,
+        }
+        if (postData.type === "video") {
+            this.checkVideoUrl(postData)
+        } else if (postData.type === "image") {
+            this.checkImageUrl(postData)
+        }
+
+        this.setState({
+            value: "",
+            type: ""
+        })
     }
 
+    onValueChange = (event) => {
+        this.setState({
+            value: event.target.value,
+            type: event.target.getAttribute("data-type")
+        })
+
+    }
+
+
+    // https://www.youtube.com/watch?v=-f57lF0pKSA
+    // https://www.youtube.com/embed/7wtfhZwyrcc
     render() {
 
         return (
 
             <div className="row">
+
                 {/* <div className="col s6 offset-s3">
                     <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
@@ -37,6 +122,7 @@ class CreatePostButton extends React.Component {
                         </div>
                     </div>
                 </div> */}
+
 
 
                 <div className="fixed-action-btn horizontal click-to-toggle">
@@ -58,16 +144,24 @@ class CreatePostButton extends React.Component {
                             <form className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
+
                                         <textarea id="textarea1" className="materialize-textarea"></textarea>
                                         <label htmlFor="textarea1">URL</label>
                                     </div>
+
+                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
+                                        <label htmlFor="textarea1" value="iuygigiug" >URL</label>
+                                    </div>
+                                    <p> {this.state.error}</p>
+
                                 </div>
                             </form>
                         </div>
 
                     </div>
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
+
+                        <p className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</p>
                     </div>
                 </div>
 
@@ -79,7 +173,7 @@ class CreatePostButton extends React.Component {
                             <form className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="image" className="materialize-textarea"></textarea>
                                         <label htmlFor="textarea1">URL</label>
                                     </div>
                                 </div>
@@ -88,11 +182,10 @@ class CreatePostButton extends React.Component {
 
                     </div>
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
+
+                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
-
-
                 <div id="modalPost" className="modal">
                     <div className="modal-content">
                         <h4>New Post</h4>
@@ -100,7 +193,7 @@ class CreatePostButton extends React.Component {
                             <form className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="text" className="materialize-textarea"></textarea>
                                         <label htmlFor="textarea1">What's up?</label>
                                     </div>
                                 </div>
@@ -110,7 +203,7 @@ class CreatePostButton extends React.Component {
                     </div>
 
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Post</a>
+                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
             </div>
