@@ -16,7 +16,6 @@ class ViewPostDetails extends React.Component {
     }
 
     render() {
-
         return (
             <main>
                 <div className="container">
@@ -24,7 +23,7 @@ class ViewPostDetails extends React.Component {
                         {this.checkType()}
                         <InputComment />
                         <ul className="row">
-                            <Comment />
+                            <Comment postId={this.props.match.params.id} />
                         </ul>
                     </div>
                 </div>

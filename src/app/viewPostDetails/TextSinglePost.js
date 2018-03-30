@@ -45,14 +45,14 @@ class TextSinglePost extends React.Component {
 
 
 
-            <div class="row">
-                <div class="col s6 offset-s3">
-                    <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                            <span class="card-title">{this.state.userDisplayName}</span>
+            <div className="row">
+                <div className="col s6 offset-s3">
+                    <div className="card blue-grey darken-1">
+                        <div className="card-content white-text">
+                            <span className="card-title">{this.state.userDisplayName}</span>
                             <p>{this.state.text}</p>
                         </div>
-                        <div class="card-action">
+                        <div className="card-action">
                             <h6><span>{this.state.commentsNum}</span>comments... collapse...</h6>
 
                         </div>
