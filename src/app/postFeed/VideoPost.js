@@ -23,13 +23,13 @@ class VideoPost extends React.Component {
 
 
                     <div className="col s6 offset-s3">
-                        <div className="card blue-grey darken-1">
-                            <div className="card-content white-text">
+                        <div className="card ">
+                            <div className="card-content white-text videoCard">
                                 <iframe width="100%" height="315" src={this.changeVideoUrl(this.props.data.videoUrl)} title="youtube video" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                             </div>
                             <div className="card-action">
-                                <p>{this.props.data.userDisplayName}</p>
-                                <h6><span>{this.props.data.commentsNum}</span>comments... collapse comments</h6>
+                                <a href="#">{this.props.data.userDisplayName}</a>
+                                <h6><span>{this.props.data.commentsNum}</span> comments... collapse comments</h6>
                             </div>
 
                         </div>

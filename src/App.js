@@ -5,6 +5,7 @@ import { Header } from '../src/app/partials/Header'
 import { Footer } from './app/partials/Footer'
 import { Route, Switch } from 'react-router-dom'
 import { ViewPostDetails } from './app/viewPostDetails/PostDetails'
+import { MyProfilePage } from './app/myProfile/MyProfilePage';
 
 
 
@@ -19,6 +20,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
+          <Route exact path='/Profile/' component={MyProfilePage} />
         </Switch>
         <Footer />
       </React.Fragment>

@@ -2,9 +2,6 @@ import React from 'react'
 import M from "materialize-css"
 
 class CreatePostButton extends React.Component {
-    constructor(props) {
-        super(props)
-
         this.state = {
             value: "",
             type: "",
@@ -66,6 +63,16 @@ class CreatePostButton extends React.Component {
     }
 
 
+
+        var modalVideo = document.querySelector('#modalVideo');
+        var videoModalInstance = M.Modal.init(modalVideo);
+
+        var modalImage = document.querySelector('#modalImage');
+        var imageModalInstance = M.Modal.init(modalImage);
+
+        var modalPost = document.querySelector('#modalPost');
+        var postModalInstance = M.Modal.init(modalPost);
+
     createPost = (event) => {
         event.preventDefault();
 
@@ -90,6 +97,7 @@ class CreatePostButton extends React.Component {
             value: event.target.value,
             type: event.target.getAttribute("data-type")
         })
+
     }
 
 
@@ -100,7 +108,23 @@ class CreatePostButton extends React.Component {
         return (
 
             <div className="row">
-                {/* BUTTONS AND MODALS */}
+
+                {/* <div className="col s6 offset-s3">
+                    <div className="card blue-grey darken-1">
+                        <div className="card-content white-text">
+                            <span className="card-title">Card Title</span>
+                            <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div className="card-action">
+                            <a>This is a link</a>
+                            <a>This is a link</a>
+                        </div>
+                    </div>
+                </div> */}
+
+
+
                 <div className="fixed-action-btn horizontal click-to-toggle">
                     <a className="btn-floating btn-large red">
                         <i className="large material-icons">mode_edit</i>
@@ -112,7 +136,7 @@ class CreatePostButton extends React.Component {
                     </ul>
                 </div>
 
-                {/* VIDEO MODAL */}
+
                 <div id="modalVideo" className="modal">
                     <div className="modal-content">
                         <h4>New Video Post</h4>
@@ -120,21 +144,28 @@ class CreatePostButton extends React.Component {
                             <form className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
+
+                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <label htmlFor="textarea1">URL</label>
+                                    </div>
+
                                         <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
                                         <label htmlFor="textarea1" value="iuygigiug" >URL</label>
                                     </div>
                                     <p> {this.state.error}</p>
+
                                 </div>
                             </form>
                         </div>
 
                     </div>
                     <div className="modal-footer">
+
                         <p className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</p>
                     </div>
                 </div>
 
-                {/* IMAGE MODAL */}
+
                 <div id="modalImage" className="modal">
                     <div className="modal-content">
                         <h4>New Image Post</h4>
@@ -151,11 +182,10 @@ class CreatePostButton extends React.Component {
 
                     </div>
                     <div className="modal-footer">
+
                         <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
-
-                {/* POST MODAL */}
                 <div id="modalPost" className="modal">
                     <div className="modal-content">
                         <h4>New Post</h4>

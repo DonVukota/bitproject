@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const Header = () => {
     return (
-        <header>
+        <header >
             <nav>
-                <div className="nav-wrapper">
-                    <a className="brand-logo">BitBook</a>
+                <div className="nav-wrapper headCss">
+                    <a id="logoc" className="brand-logo">BitBook</a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to='/'>Feed</Link></li>
-                        <li><Link to='/People'>People</Link></li>
-                        <li><Link to='/Profile'>Profile</Link></li>
+                        <li><Link to='/'  id="feedc">Feed</Link></li>
+                        <li ><Link to='/People'  id="peoplec">People</Link></li>
+                        <li ><Link to='/Profile' id="profilec">Profile</Link></li>
                     </ul>
                 </div>
             </nav>

@@ -48,14 +48,19 @@ class ImageSinglePost extends React.Component {
             <div className="videoPost">
 
                 <div className="col s6 offset-s3">
-                    <div className="card blue-grey darken-1">
+                    <div className="card ">
                         <div className="card-content white-text">
+
                             <img width="100%" src={this.state.imageUrl} frameBorder="0" allow="autoplay; encrypted-media" alt=' is not valid .|.' allowFullScreen></img>
                         </div>
                         <div className="card-action row">
                             <a href="">{this.state.userDisplayName}</a>
                             <p><span>{this.state.commentsNum}</span> Comments...</p>
                         </div>
+
+                        <a>{this.state.userDisplayName}</a>
+                        <p className="imageText"><span>{this.state.commentsNum}</span> Comments...</p>
+
                     </div>
                 </div>
 

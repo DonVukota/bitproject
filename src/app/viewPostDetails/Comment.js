@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { getCommentsByPostId } from "../services/fetchCommentsByPostId"
 import { SingleComment } from "./SingelComment"
 
@@ -22,9 +21,7 @@ class Comment extends React.Component {
     componentDidMount() {
         this.getFeedData()
     }
-
     render() {
-
         return (
             this.state.listOfComments.map((singlecomment) => {
                 return <SingleComment comment={singlecomment} />

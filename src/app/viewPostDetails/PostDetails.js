@@ -6,6 +6,7 @@ import { TextSinglePost } from "./TextSinglePost"
 import { ImageSinglePost } from "./ImageSinglePost"
 
 
+
 class ViewPostDetails extends React.Component {
     checkType = () => {
         if (this.props.match.params.type === "video") {
@@ -18,7 +19,7 @@ class ViewPostDetails extends React.Component {
     render() {
         return (
             <main>
-                <div className="container">
+                <div className="container mainFeed">
                     <div className="row">
                         {this.checkType()}
                         <InputComment />
