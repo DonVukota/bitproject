@@ -66,8 +66,9 @@ class FeedPage extends React.Component {
                         } return <h1> LOADING... </h1>
 
                     })}
-                <CreatePostButton onCreatePost={this.createPost} />
+                    <CreatePostButton onCreatePost={this.createPost} />
 
+                </div>
             </div>)
 
     }

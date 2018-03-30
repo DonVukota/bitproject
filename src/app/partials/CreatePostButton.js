@@ -2,6 +2,9 @@ import React from 'react'
 import M from "materialize-css"
 
 class CreatePostButton extends React.Component {
+    constructor(props) {
+        super(props)
+
         this.state = {
             value: "",
             type: "",
@@ -63,15 +66,6 @@ class CreatePostButton extends React.Component {
     }
 
 
-
-        var modalVideo = document.querySelector('#modalVideo');
-        var videoModalInstance = M.Modal.init(modalVideo);
-
-        var modalImage = document.querySelector('#modalImage');
-        var imageModalInstance = M.Modal.init(modalImage);
-
-        var modalPost = document.querySelector('#modalPost');
-        var postModalInstance = M.Modal.init(modalPost);
 
     createPost = (event) => {
         event.preventDefault();
@@ -149,12 +143,12 @@ class CreatePostButton extends React.Component {
                                         <label htmlFor="textarea1">URL</label>
                                     </div>
 
-                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
-                                        <label htmlFor="textarea1" value="iuygigiug" >URL</label>
-                                    </div>
-                                    <p> {this.state.error}</p>
-
+                                    <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
+                                    <label htmlFor="textarea1" value="iuygigiug" >URL</label>
                                 </div>
+                                <p> {this.state.error}</p>
+
+
                             </form>
                         </div>
 
@@ -206,7 +200,7 @@ class CreatePostButton extends React.Component {
                         <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

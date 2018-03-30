@@ -18,11 +18,11 @@ class ImagePost extends React.Component {
                             <div><a>{this.props.data.userDisplayName}</a>
                                 <p><span>{this.props.data.commentsNum}</span> Comments...</p></div>
 
-                            </div>
                         </div>
                     </div>
-
                 </div>
+
+
 
             </Link>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { getCommentsByPostId } from "../services/fetchCommentsByPostId"
-import { SingleComment } from "./SingelComment"
+import { SingleComment } from "./SingleComment"
 
 class Comment extends React.Component {
     constructor(props) {
