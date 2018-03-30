@@ -188,3 +188,39 @@ p {
   margin-top: 1%;
   background-image: url("https://wallpaperscraft.com/image/grass_lawn_green_22661_3840x2160.jpg");
 }
+
+.profilesCard {
+  width: 150%;
+  position: relative;
+  right: 14%;
+  margin: 1% !important;
+  padding-left: 40%;
+}
+
+.profilesImg {
+  position: relative;
+  bottom: 25px;
+}
+
+.profilesName {
+  color: white;
+  position: relative;
+  bottom: 10px;
+}
+
+.profilesAbout {
+  color: white;
+  position: relative;
+  bottom: 15px;
+}
+
+.profilesLastPost {
+  color: white;
+  float: right;
+  position: relative;
+  bottom: 110px;
+}
+
+* {
+  word-wrap: break-word;
+}

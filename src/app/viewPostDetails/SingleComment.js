@@ -35,7 +35,7 @@ class SingleComment extends React.Component {
                         <h6 className="title titleName avatarName ">{this.props.comment.authorName}</h6>
                     </div>
                     <p className="col s8 commentBox">
-                        {this.props.comment.body}
+                        {this.props.comment.body}dsfdsfdsfdsfdsfdsfdsfd fdsfdsfdsfdsfdsfdsfdsfds
                     </p>
                 </div>
             </li>
