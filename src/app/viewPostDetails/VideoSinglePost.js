@@ -58,7 +58,7 @@ class VideoSinglePost extends React.Component {
                         </div>
                         <div className="card-action">
                             <a >{this.state.userDisplayName}</a>
-                            <h6><span>{this.state.commentsNum}</span>comments... collapse comments</h6>
+                            <h6><span>{this.state.commentsNum}</span> comments... collapse comments</h6>
                         </div>
                     </div>
                 </div>

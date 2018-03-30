@@ -1,5 +1,5 @@
 import React from "react"
-import { fetchNumberOfComments } from '../services/fetchNumberOfComments'
+import { fetchProfile } from '../services/fetchProfile'
 
 class MyProfilePage extends React.Component {
 
@@ -14,13 +14,13 @@ class MyProfilePage extends React.Component {
             avatarUrl: "",
             postsCount: this.props.data,
             commentsCount: this.props.data,
-            
+
 
         }
     }
 
     getFeedData() {
-        fetchNumberOfComments()
+        fetchProfile()
             .then((fetchedData) => {
                 this.setState({
                     userId: fetchedData.userId,

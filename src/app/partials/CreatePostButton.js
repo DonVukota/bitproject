@@ -24,7 +24,7 @@ class CreatePostButton extends React.Component {
         return (
 
             <div className="row">
-                <div className="col s6 offset-s3">
+                {/* <div className="col s6 offset-s3">
                     <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
                             <span className="card-title">Card Title</span>
@@ -36,7 +36,7 @@ class CreatePostButton extends React.Component {
                             <a>This is a link</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
                 <div className="fixed-action-btn horizontal click-to-toggle">

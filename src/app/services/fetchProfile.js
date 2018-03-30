@@ -1,4 +1,4 @@
-export const fetchNumberOfComments = () => {
+export const fetchProfile = () => {
     return fetch("http://bitbookapi.azurewebsites.net/api/profile/", {
         headers: {
             "Content-Type": "application/json",

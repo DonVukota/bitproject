@@ -29,7 +29,7 @@ class VideoPost extends React.Component {
                             </div>
                             <div className="card-action">
                                 <a href="#">{this.props.data.userDisplayName}</a>
-                                <h6><span>{this.props.data.commentsNum}</span>comments... collapse comments</h6>
+                                <h6><span>{this.props.data.commentsNum}</span> comments... collapse comments</h6>
                             </div>
 
                         </div>

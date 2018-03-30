@@ -52,10 +52,10 @@ class ImageSinglePost extends React.Component {
                         <div className="card-content white-text">
                             <img width="100%" src={this.state.imageUrl} alt="" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></img>
                         </div>
-                        <div className="card-action row">
-                            <a>{this.state.userDisplayName}</a>
-                            <p><span>{this.state.commentsNum}</span> Comments...</p>
-                        </div>
+
+                        <a>{this.state.userDisplayName}</a>
+                        <p className="imageText"><span>{this.state.commentsNum}</span> Comments...</p>
+
                     </div>
                 </div>
 
