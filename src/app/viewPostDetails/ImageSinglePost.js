@@ -53,10 +53,7 @@ class ImageSinglePost extends React.Component {
 
                             <img width="100%" src={this.state.imageUrl} frameBorder="0" allow="autoplay; encrypted-media" alt=' is not valid .|.' allowFullScreen></img>
                         </div>
-                        <div className="card-action row">
-                            <a href="">{this.state.userDisplayName}</a>
-                            <p><span>{this.state.commentsNum}</span> Comments...</p>
-                        </div>
+
 
                         <a>{this.state.userDisplayName}</a>
                         <p className="imageText"><span>{this.state.commentsNum}</span> Comments...</p>
