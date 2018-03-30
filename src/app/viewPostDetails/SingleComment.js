@@ -1,7 +1,29 @@
 import React from 'react';
+import {
+    fetchProfile
+} from "../services/fetchProfile"
 
 class SingleComment extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            avatarUrl: ""
 
+        }
+    }
+    getFeedData() {
+        fetchProfile()
+            .then((fetchedData) => {
+                this.setState({
+                    avatarUrl: fetchedData.avatarUrl,
+
+                })
+            })
+    }
+
+    componentDidMount() {
+        this.getFeedData()
+    }
 
     render() {
 
@@ -9,11 +31,11 @@ class SingleComment extends React.Component {
             <li className=" card commentCard collection-item avatar col s6 offset-s3">
                 <div className="row ">
                     <div className=" col s3">
-                        <img src="http://appninja.co/_include/img/profile/profile-01.jpg" alt="" className="circle col s11 commentAvatar" />
-                        <h6 className="title titleName avatarName ">Kyrillos Wanjala</h6>
+                        <img src={this.state.avatarUrl} alt="" className="circle col s11 commentAvatar" />
+                        <h6 className="title titleName avatarName ">{this.props.comment.authorName}</h6>
                     </div>
-                    <p className="col s8  commentBox">
-                        {this.props.comment.body}sdfasfasasffasdfasfasasffasdfasfasasffasdfasfasasffasdfasfasasffasdfasfasasffasdfasfas
+                    <p className="col s8 commentBox">
+                        {this.props.comment.body}
                     </p>
                 </div>
             </li>

@@ -1,12 +1,21 @@
 import React from 'react';
-import { getCommentsByPostId } from "../services/fetchCommentsByPostId"
-import { SingleComment } from "./SingleComment"
+import {
+    getCommentsByPostId
+} from "../services/fetchCommentsByPostId"
+import {
+    SingleComment
+} from "./SingleComment"
+import {
+    fetchProfile
+} from "../services/fetchProfile"
 
 class Comment extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             listOfComments: []
+
+
         }
     }
 
@@ -24,7 +33,10 @@ class Comment extends React.Component {
     render() {
         return (
             this.state.listOfComments.map((singlecomment) => {
-                return <SingleComment comment={singlecomment} />
+                return <SingleComment comment={
+                    singlecomment
+                }
+                />
             })
         )
     }

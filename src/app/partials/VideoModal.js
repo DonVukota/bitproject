@@ -1,4 +1,6 @@
-import React, { Componenet } from 'react'
+import React, {
+    Componenet
+} from 'react'
 import M from "materialize-css"
 
 class CreatePostButton extends React.Component {
@@ -6,3 +8,4 @@ class CreatePostButton extends React.Component {
         super(props)
 
     }
+}

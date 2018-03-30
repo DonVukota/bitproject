@@ -53,23 +53,25 @@ class FeedPage extends React.Component {
 
     render() {
         return (
+            <main>
+                <div className=" container mainFeed ">
+                    <div className="row">
+                        {this.state.listOfLastPosts.map((postProperties, index) => {
+                            if (postProperties.type === "video") {
+                                return <VideoPost data={postProperties} key={index} />
+                            } else if (postProperties.type === "image") {
+                                return <ImagePost data={postProperties} key={index} />
+                            } else if (postProperties.type === "text") {
+                                return <TextPost data={postProperties} key={index} />
+                            } return <h1> LOADING... </h1>
 
-            <div className=" container mainFeed ">
-                <div className="row">
-                    {this.state.listOfLastPosts.map((postProperties, index) => {
-                        if (postProperties.type === "video") {
-                            return <VideoPost data={postProperties} key={index} />
-                        } else if (postProperties.type === "image") {
-                            return <ImagePost data={postProperties} key={index} />
-                        } else if (postProperties.type === "text") {
-                            return <TextPost data={postProperties} key={index} />
-                        } return <h1> LOADING... </h1>
+                        })}
+                        <CreatePostButton onCreatePost={this.createPost} />
 
-                    })}
-                    <CreatePostButton onCreatePost={this.createPost} />
-
+                    </div>
                 </div>
-            </div>)
+            </main>
+        )
 
     }
 }
