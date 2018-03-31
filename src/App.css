@@ -190,35 +190,27 @@ p {
 }
 
 .profilesCard {
-  width: 150%;
+  width: 170%;
   position: relative;
-  right: 14%;
+  right: 25%;
   margin: 1% !important;
   padding-left: 40%;
 }
 
-.profilesImg {
-  position: relative;
-  bottom: 25px;
-}
+.profilesImg {}
 
 .profilesName {
   color: white;
-  position: relative;
-  bottom: 10px;
 }
 
 .profilesAbout {
   color: white;
-  position: relative;
-  bottom: 15px;
+  text-align: center;
 }
 
 .profilesLastPost {
   color: white;
   float: right;
-  position: relative;
-  bottom: 110px;
 }
 
 * {
