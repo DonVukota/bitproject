@@ -36,3 +36,45 @@ body{
   -moz-box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
   box-shadow: 6px 7px 25px -5px rgba(15,15,15,1);
 }
+.editPic{
+  margin-bottom: 0;
+}
+.editModal2{
+  width: 40%;
+  margin-right: 0;
+  
+
+}
+.noMarg{
+  margin-bottom: 0;
+  margin-right: 0;
+  
+}
+.editProfile{
+  align-content:center; 
+}
+
+.inputName{
+  position: relative;
+left: 200px;
+bottom:150px;
+
+}
+.button{
+  position: relative;
+  left:15px;
+
+}
+.inputDesc{
+  position: relative;
+  bottom: 55px;
+}
+.buttonsOfModelUser{
+  position: relative;
+  left:380px;
+
+}
+.editModal{
+  width: 35%!important;
+  background-color: green!important;
+}

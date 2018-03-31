@@ -81,8 +81,8 @@ class CreatePostButton extends React.Component {
         }
 
         this.setState({
-            value: "",
-            type: ""
+            value: " ",
+            type: " "
         })
     }
 
@@ -144,7 +144,7 @@ class CreatePostButton extends React.Component {
                                     </div>
 
                                     <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
-                                    <label htmlFor="textarea1" value="iuygigiug" >URL</label>
+                                    <label htmlFor="textarea1" value="" >URL</label>
                                 </div>
                                 <p> {this.state.error}</p>
 
