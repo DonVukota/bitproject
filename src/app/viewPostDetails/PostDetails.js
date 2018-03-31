@@ -22,7 +22,6 @@ class ViewPostDetails extends React.Component {
                 <div className="container mainFeed">
                     <div className="row">
                         {this.checkType()}
-                        <InputComment />
                         <ul className="row">
                             <Comment postId={this.props.match.params.id} />
                         </ul>

@@ -137,16 +137,11 @@ class CreatePostButton extends React.Component {
                         <div className="row">
                             <form className="col s12">
                                 <div className="row">
-                                    <div className="input-field col s12">
-
-                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
-                                        <label htmlFor="textarea1">URL</label>
-                                    </div>
 
                                     <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
                                     <label htmlFor="textarea1" value="iuygigiug" >URL</label>
-                                </div>
                                 <p> {this.state.error}</p>
+                                </div>
 
 
                             </form>
