@@ -215,3 +215,22 @@ p {
 * {
   word-wrap: break-word;
 }
+
+.dropDown {
+  position: relative;
+  width: 10%;
+  border: 1px solid black;
+  color: black;
+  background-color: rgb(28, 179, 158);
+  border-radius: 5%;
+  margin-top: 5%;
+  left: 70%;
+  top: 30%;
+}
+
+#dropdown1 {
+  background-color: rgb(28, 179, 158);
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+}
