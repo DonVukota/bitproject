@@ -5,7 +5,39 @@ import React, { Component } from 'react'
 class EditProfilePage extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            fullNameEdited: "",
+            descriptionEdited: "",
+            imgUrlUpdate: "",
+
+        }
     }
+    removeValue = () => {
+        this.setState({ fullNameEdited: "", descriptionEdited: "", imgUrlUpdate: "" })
+    }
+
+    imgUrlUpdate = (event) => {
+        this.setState({ imgUrlUpdate: event.target.value })
+    }
+
+    nameUpdate = (event) => {
+        this.setState({ fullNameEdited: event.target.value })
+    }
+
+    descriptionUpdate = (event) => {
+        this.setState({ descriptionEdited: event.target.value })
+    }
+
+    sendDataForUpdate = (event) => {
+        event.preventDefault();
+        const imgUrlUpdate = this.state.imgUrlUpdate
+        const description = this.state.descriptionEdited
+        const fullName = this.state.fullNameEdited
+        this.props.onUpdateProfile(fullName, description, imgUrlUpdate)
+        this.setState({ fullNameEdited: "", descriptionEdited: "", imgUrlUpdate: "" })
+    }
+
 
     render() {
         return (
@@ -19,19 +51,25 @@ class EditProfilePage extends React.Component {
                 </div>
                 <div className="row inputName">
                     <div className="input-field col s6">
-                        <input placeholder='Full Name' id="first_name2" type="text" className="validate" />
-                        <label className="active" for="first_name2">Name</label>
+                        <input placeholder='Url to your profile image?' id="first_name2" type="text" className="validate" onChange={this.imgUrlUpdate} value={this.state.imgUrlUpdate} />
+                        <label className="active" for="first_name2">Image Url</label>
                     </div>
                 </div>
                 <div className="row inputDesc">
                     <div className="input-field col s6">
-                        <input placeholder='input your description here' id="first_name2" type="text" className="validate" />
+                        <input placeholder='   Full Name?' id="first_name2" type="text" className="validate" onChange={this.nameUpdate} value={this.state.fullNameEdited} />
+
+                    </div>
+                </div>
+                <div className="row inputDesc">
+                    <div className="input-field col s6">
+                        <input placeholder='   Your description here' id="first_name2" type="text" className="validate" onChange={this.descriptionUpdate} value={this.state.descriptionEdited} />
 
                     </div>
                 </div>
                 <div className='buttonsOfModelUser'>
-                    <p className="waves-effect waves-light btn">CLOSE</p>
-                    <p className="waves-effect waves-light btn">UPDATE</p>
+                    <p className="modal-action modal-close waves-effect waves-light btn" onClick={this.removeValue}>CLOSE</p>
+                    <p className="modal-action modal-close waves-effect waves-light btn" onClick={this.sendDataForUpdate}>UPDATE</p>
                 </div>
 
             </div>
