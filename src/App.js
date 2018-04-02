@@ -8,6 +8,7 @@ import { ViewPostDetails } from './app/viewPostDetails/PostDetails'
 import { MyProfilePage } from './app/myProfile/MyProfilePage'
 import { UsersPage } from './app/peoplePage/UsersPage'
 import { SearchPeople } from "./app/peoplePage/SearchPeople"
+import { UsersProfilePage } from './app/peoplePage/UsersProfilePage';
 
 
 
@@ -22,8 +23,9 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
-          <Route exact path='/Profile/' component={MyProfilePage} />
+          <Route exact path='/MyProfile/' component={MyProfilePage} />
           <Route exact path='/People/' component={UsersPage} />
+          <Route exact path='/Profile/:UserId' component={UsersProfilePage} />
         </Switch>
         <Footer />
       </React.Fragment>

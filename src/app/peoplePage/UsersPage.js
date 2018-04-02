@@ -35,7 +35,9 @@ class UsersPage extends React.Component {
         this.setState({ searchValue: event.target.value });
 
         const filteredUsers = this.state.listOfUsers.filter((user) => {
-            if (user.name.includes(event.target.value)) {
+            const value = event.target.value.toLowerCase()
+            const name = user.name.toLowerCase()
+            if (name.includes(value)) {
                 return user
             }
         })

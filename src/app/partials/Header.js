@@ -9,7 +9,7 @@ const Header = () => {
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to='/' id="feedc">Feed</Link></li>
                         <li ><Link to='/People' id="peoplec">People</Link></li>
-                        <li ><Link to='/Profile' id="profilec">Profile</Link></li>
+                        <li ><Link to='/MyProfile' id="profilec">Profile</Link></li>
                     </ul>
                 </div>
             </nav>

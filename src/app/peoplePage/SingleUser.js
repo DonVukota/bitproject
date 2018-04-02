@@ -3,6 +3,7 @@ import {
     fetchUsers
 } from "../services/fetchUsers";
 import { checkPostDate } from "../../shared/checkPostDate";
+import { Link } from "react-router-dom"
 
 class SingleUser extends React.Component {
     constructor(props) {
@@ -17,9 +18,9 @@ class SingleUser extends React.Component {
 
 
 
-            <div className="row   profilesCard" >
+            <Link to={`Profile/${this.props.user.id}`}> <div className="row   profilesCard" >
                 <div className=" card avatar col s6 offset-s3   profilesCard" >
-                    <div className="row " >
+                    <div className="row rowCard" >
                         <div className=" col s3" >
                             <img src={
                                 this.props.user.avatarUrl}
@@ -35,6 +36,7 @@ class SingleUser extends React.Component {
                     </div>
                 </div>
             </div>
+            </Link>
 
 
 

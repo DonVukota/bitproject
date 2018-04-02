@@ -32,20 +32,24 @@
 }
 
 .profileCard {
-  margin-top: 4%;
+  margin-top: 4% !important;
+  margin-bottom: 10%;
   width: 50%;
-  position: absolute;
-  left: 22%;
+  margin: 0 auto;
   background-color: white;
-  -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1);
-  -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1);
-  box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1);
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
 }
 
 .profileImg {
+  margin-top: 5%;
   width: 250px;
   height: 250px;
   border: 2px solid black;
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
 }
 
 .aboutSection {
@@ -55,7 +59,7 @@
   padding: 10px;
 }
 
-.bla {
+.aboutBorder {
   border: 3px solid rgb(4, 204, 47);
   border-radius: 25px;
   margin-bottom: 1%;
@@ -69,10 +73,6 @@
   background-image: url("http://hdgifs.com/wp-content/uploads/2017/01/dscovrepicmoontransitfull.gif");
   background-color: rgb(4, 204, 47);
   margin-bottom: 2%;
-}
-
-.footer {
-  background-image: url("http://hdgifs.com/wp-content/uploads/2017/01/dscovrepicmoontransitfull.gif");
 }
 
 .videoCard {
@@ -185,18 +185,18 @@ p {
   width: 70% !important;
   margin-left: 15%;
   margin-top: 1%;
-  background-image: url("https://wallpaperscraft.com/image/grass_lawn_green_22661_3840x2160.jpg");
+  background-image: url("https://media0.giphy.com/media/uFmH8za4E6M5STIiTu/giphy.gif");
 }
 
 .profilesCard {
-  width: 170%;
-  position: relative;
-  right: 25%;
-  margin: 1% !important;
-  padding-left: 40%;
+  width: 100%;
 }
 
-.profilesImg {}
+.profilesImg {
+  -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+}
 
 .profilesName {
   color: white;
