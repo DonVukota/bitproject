@@ -22,7 +22,7 @@ class SingleUser extends React.Component {
                     <div className="row " >
                         <div className=" col s3" >
                             <img src={
-                                this.props.user.avatarUr}
+                                this.props.user.avatarUrl}
                                 className="circle col s11 profilesImg " />
                         </div> <h6 className="title titleName profilesName " > {
                             this.props.user.name} </h6> <p className="col s8 profilesAbout" > {this.props.user.aboutShort} </p>
