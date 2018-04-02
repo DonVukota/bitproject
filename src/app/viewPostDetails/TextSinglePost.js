@@ -1,5 +1,6 @@
 import React from 'react';
 import { getSingleTextPost } from "../services/fetchSingleTextPost"
+import { fetchDeletePost } from "../services/fetchDeletePost"
 
 class TextSinglePost extends React.Component {
     constructor(props) {
@@ -35,6 +36,10 @@ class TextSinglePost extends React.Component {
         this.getFeedData()
     }
 
+    deletePost = () => {
+        fetchDeletePost(this.props.data)
+            .then(() => window.location.replace(`http://localhost:3000/#/`))
+    }
 
 
 
@@ -54,8 +59,12 @@ class TextSinglePost extends React.Component {
                         </div>
                         <div className="card-action">
 
-                            <h6><span>{this.state.commentsNum}</span> comments... collapse...</h6>
-
+                            <div className="row">
+                                <h6 className="col s4"><span>{this.state.commentsNum}</span> comments</h6>
+                                <a className="waves-effect waves-teal btn-flat col s2 offset-s5">
+                                    <i className="material-icons white-text" onClick={this.deletePost}>delete_forever</i>
+                                </a>
+                            </div>
 
                         </div>
                     </div>
