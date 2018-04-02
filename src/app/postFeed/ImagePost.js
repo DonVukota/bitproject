@@ -16,7 +16,7 @@ class ImagePost extends React.Component {
                                 <img width="100%" src={this.props.data.imageUrl} alt="" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></img>
                             </div>
                             <div><a>{this.props.data.userDisplayName}</a>
-                                <p><span>{this.props.data.commentsNum}</span> Comments...</p></div>
+                                <p><span>{this.props.data.commentsNum}</span> comments</p></div>
 
                         </div>
                     </div>
