@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { fetchProfile } from '../services/fetchProfile'
 import M from "materialize-css"
 import { EditProfilePage } from './EditProfilePage'
+import { fetchEditProfile } from "../services/fetchEditProfile"
 class MyProfilePage extends React.Component {
 
     constructor(props) {
@@ -35,6 +36,10 @@ class MyProfilePage extends React.Component {
             })
     }
 
+    onUpdateProfile = (fullName, description, imgUrlUpdate) => {
+        fetchEditProfile(fullName, description, imgUrlUpdate, "bla", 'neBla@com').then(() => this.getFeedData())
+    }
+
     componentDidMount() {
         const modalButton = document.querySelector('.modal');
         M.Modal.init(modalButton);
@@ -56,7 +61,7 @@ class MyProfilePage extends React.Component {
                     </div>
                     <p className="waves-effect waves-light btn modal-trigger" href="#modal1">Edit Profile</p>
                 </div>
-                <EditProfilePage />
+                <EditProfilePage onUpdateProfile={this.onUpdateProfile} />
 
             </main>
 
