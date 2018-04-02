@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-    SingleUser
-} from '../peoplePage/SingleUser'
-import {
-    fetchUsers
-} from "../services/fetchUsers"
+import { SingleUser } from '../peoplePage/SingleUser'
+import { fetchUsers } from "../services/fetchUsers"
+import { SearchPeople } from "./SearchPeople"
 
 class UsersPage extends React.Component {
 
@@ -12,11 +9,9 @@ class UsersPage extends React.Component {
         super(props)
         this.state = {
             listOfUsers: [],
+            filteredUsers: [],
             searchValue: ""
         }
-
-
-
     }
 
     getFeedData() {
@@ -24,42 +19,41 @@ class UsersPage extends React.Component {
             .then((userList) => {
                 this.setState({
                     listOfUsers: userList,
-                    searchValue: ""
+                    filteredUsers: userList
                 })
             })
     }
 
+
     componentDidMount() {
         this.getFeedData()
     }
+
+
+
     searchUser = (event) => {
-        this.setState({
-            searchValue: event.target.value
+        this.setState({ searchValue: event.target.value });
+
+        const filteredUsers = this.state.listOfUsers.filter((user) => {
+            if (user.name.includes(event.target.value)) {
+                return user
+            }
         })
-        console.log(this.state.searchValue)
+
+        this.setState({
+            filteredUsers
+        })
     }
 
     render() {
-
         return (
-            <main>
-                <nav className="searchBar">
-                    <div class="nav-wrapper">
-                        <form>
-                            <div class="input-field ">
-                                <input className="" onChange={this.searchUser} value={this.state.searchValue} id="search" type="search" required />
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form>
-                    </div>
-                </nav>
-
-                <div className=" container mainFeed ">
-
-                    {this.state.listOfUsers.map((singleUser) => {
-                        return <SingleUser user={singleUser} />
-                    })
+            <main >
+                <SearchPeople value={this.state.searchValue} filterUsers={this.searchUser} />
+                <div className=" container mainFeed "  >
+                    {
+                        this.state.filteredUsers.map((singleUser) => {
+                            return <SingleUser user={singleUser} />
+                        })
                     }
 
                 </div>

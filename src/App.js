@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom'
 import { ViewPostDetails } from './app/viewPostDetails/PostDetails'
 import { MyProfilePage } from './app/myProfile/MyProfilePage'
 import { UsersPage } from './app/peoplePage/UsersPage'
+import { SearchPeople } from "./app/peoplePage/SearchPeople"
 
 
 
