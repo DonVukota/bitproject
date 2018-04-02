@@ -18,7 +18,7 @@ class TextPost extends React.Component {
                                 <p>{this.props.data.text}</p>
                             </div>
                             <div className="card-action">
-                                <h6><span>{this.props.data.commentsNum}</span> comments... collapse...</h6>
+                                <h6><span>{this.props.data.commentsNum}</span> comments</h6>
 
 
                             </div>

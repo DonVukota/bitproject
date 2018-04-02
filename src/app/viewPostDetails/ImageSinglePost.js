@@ -1,5 +1,6 @@
 import React from 'react';
 import { getSingleImagePost } from "../services/fetchSingleImagePost"
+import { fetchDeletePost } from "../services/fetchDeletePost"
 
 class ImageSinglePost extends React.Component {
     constructor(props) {
@@ -35,6 +36,10 @@ class ImageSinglePost extends React.Component {
         this.getFeedData()
     }
 
+    deletePost = () => {
+        fetchDeletePost(this.props.data)
+            .then(() => window.location.replace(`http://localhost:3000/#/`))
+    }
 
 
 
@@ -45,7 +50,7 @@ class ImageSinglePost extends React.Component {
 
 
 
-            <div className="videoPost">
+            <div className="videoPost row">
 
                 <div className="col s6 offset-s3">
                     <div className="card ">
@@ -54,9 +59,17 @@ class ImageSinglePost extends React.Component {
                             <img width="100%" src={this.state.imageUrl} frameBorder="0" allow="autoplay; encrypted-media" alt=' is not valid .|.' allowFullScreen></img>
                         </div>
 
-
-                        <       a>{this.state.userDisplayName}</a>
-                        <p className="imageText"><span>{this.state.commentsNum}</span> Comments...</p>
+                        <div className="row">
+                            <div className="col s4">
+                                <a>{this.state.userDisplayName}</a>
+                                <p className="imageText"><span>{this.state.commentsNum}</span> comments</p>
+                            </div>
+                            <div className="col s2 offset-s5">
+                                <a className="waves-effect waves-teal btn-flat">
+                                    <i className="material-icons white-text" onClick={this.deletePost}>delete_forever</i>
+                                </a>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -69,7 +82,6 @@ class ImageSinglePost extends React.Component {
 
     }
 }
-
 
 
 export {
