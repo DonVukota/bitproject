@@ -1,6 +1,8 @@
 import React from 'react'
 import M from "materialize-css"
-
+import {VideoModal} from "../modals/VideoModal"
+import {ImgModal} from "../modals/ImgModal"
+import {TextModal} from "../modals/TextModal"
 class CreatePostButton extends React.Component {
     constructor(props) {
         super(props)
@@ -78,6 +80,8 @@ class CreatePostButton extends React.Component {
             this.checkVideoUrl(postData)
         } else if (postData.type === "image") {
             this.checkImageUrl(postData)
+        }else if(postData.type === "text"){
+            this.props.onCreatePost(postData)
         }
 
         this.setState({
@@ -130,6 +134,7 @@ class CreatePostButton extends React.Component {
                     </ul>
                 </div>
 
+<<<<<<< HEAD
 
                 <div id="modalVideo" className="modal ">
                     <div className="modal-content">
@@ -196,6 +201,14 @@ class CreatePostButton extends React.Component {
                     </div>
                 </div>
             </div >
+=======
+            <VideoModal onVideoChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+            <ImgModal onImageChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+            <TextModal  onTextChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+               
+               
+            </div>
+>>>>>>> c7afcd7b99bbf0ad4321db772600fecdeb10151c
         )
     }
 }

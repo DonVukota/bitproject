@@ -61,7 +61,7 @@ class MyProfilePage extends React.Component {
                     </div>
                     <p className="waves-effect waves-light btn modal-trigger" href="#modal1">Edit Profile</p>
                 </div>
-                <EditProfilePage onUpdateProfile={this.onUpdateProfile} />
+                <EditProfilePage onUpdateProfile={this.onUpdateProfile} name={this.state.name} aboutShort={this.state.aboutShort} avatarUrl={this.props.avatarUrl} />
 
             </main>
 

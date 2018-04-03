@@ -7,9 +7,9 @@ class EditProfilePage extends React.Component {
         super(props)
 
         this.state = {
-            fullNameEdited: "",
-            descriptionEdited: "",
-            imgUrlUpdate: "",
+            fullNameEdited: this.props.name,
+            descriptionEdited: this.props.aboutShort,
+            imgUrlUpdate: this.props.avatarUrl,
 
         }
     }
@@ -57,13 +57,13 @@ class EditProfilePage extends React.Component {
                 </div>
                 <div className="row inputDesc">
                     <div className="input-field col s6">
-                        <input placeholder='   Full Name?' id="first_name2" type="text" className="validate" onChange={this.nameUpdate} value={this.state.fullNameEdited} />
+                        <input placeholder={this.props.name} id="first_name2" type="text" className="validate" onChange={this.nameUpdate} value={this.state.fullNameEdited} />
 
                     </div>
                 </div>
                 <div className="row inputDesc">
                     <div className="input-field col s6">
-                        <input placeholder='   Your description here' id="first_name2" type="text" className="validate" onChange={this.descriptionUpdate} value={this.state.descriptionEdited} />
+                        <input placeholder={this.props.aboutShort} id="first_name2" type="text" className="validate" onChange={this.descriptionUpdate} value={this.state.descriptionEdited} />
 
                     </div>
                 </div>
