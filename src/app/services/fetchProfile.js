@@ -1,15 +1,13 @@
 export const fetchProfile = () => {
     return fetch("http://bitbookapi.azurewebsites.net/api/profile/", {
-        headers: {
-            "Content-Type": "application/json",
-            "Key": "bitbook",
-            "SessionId": "7A5D8FF8-B04D-4C8C-9812-8B44EB7E4C94"
-        },
-        method: 'GET'
-    })
+            headers: {
+                "Content-Type": "application/json",
+                "Key": "bitbook",
+                "SessionId": "781ed13e-c604-495b-b94e-08723708329b"
+            },
+            method: 'GET'
+        })
         .then((response) => {
             return response.json();
         })
 }
-
-

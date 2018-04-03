@@ -10,7 +10,7 @@ const fetchEditProfile = ((name, description, image, about, email) => {
         headers: {
             "Content-Type": "application/json",
             "Key": "bitbook",
-            "SessionId": "7A5D8FF8-B04D-4C8C-9812-8B44EB7E4C94"
+            "SessionId": "781ed13e-c604-495b-b94e-08723708329b"
         },
         method: "PUT"
     })

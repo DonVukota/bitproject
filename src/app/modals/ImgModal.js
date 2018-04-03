@@ -20,7 +20,7 @@ const ImgModal=(props)=>{
         </div>
         <div className="modal-footer">
 
-            <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={props.postPost}>Post</a>
+            <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat btn" onClick={props.postPost}>Post</a>
         </div>
     </div>
     )
