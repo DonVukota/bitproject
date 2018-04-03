@@ -120,18 +120,18 @@ class CreatePostButton extends React.Component {
 
 
                 <div className="fixed-action-btn horizontal click-to-toggle">
-                    <a className="btn-floating btn-large red">
+                    <a className="btn-floating btn-large proba">
                         <i className="large material-icons">mode_edit</i>
                     </a>
                     <ul>
-                        <li><a className="btn-floating red modal-trigger" href="#modalVideo"><i className="material-icons">video_library</i></a></li>
-                        <li><a className="btn-floating green modal-trigger" href="#modalImage"><i className="material-icons">photo_library</i></a></li>
-                        <li><a className="btn-floating blue modal-trigger" href="#modalPost"><i className="material-icons">textsms</i></a></li>
+                        <li><a className="btn-floating red modal-trigger proba1" href="#modalVideo"><i className="material-icons">video_library</i></a></li>
+                        <li><a className="btn-floating green modal-trigger proba2" href="#modalImage"><i className="material-icons">photo_library</i></a></li>
+                        <li><a className="btn-floating blue modal-trigger proba3" href="#modalPost"><i className="material-icons">textsms</i></a></li>
                     </ul>
                 </div>
 
 
-                <div id="modalVideo" className="modal">
+                <div id="modalVideo" className="modal ">
                     <div className="modal-content">
                         <h4>New Video Post</h4>
                         <div className="row">
@@ -150,7 +150,7 @@ class CreatePostButton extends React.Component {
                     </div>
                     <div className="modal-footer">
 
-                        <p className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</p>
+                        <p className="modal-action modal-close btn-flat btn" onClick={this.createPost}>Post</p>
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@ class CreatePostButton extends React.Component {
                     </div>
                     <div className="modal-footer">
 
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
+                        <a href="#!" className="modal-action modal-close waves-effect waves-grey btn-flat btn" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
                 <div id="modalPost" className="modal">
@@ -192,7 +192,7 @@ class CreatePostButton extends React.Component {
                     </div>
 
                     <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
+                        <a href="#!" className="modal-action modal-close btn btn-flat" onClick={this.createPost}>Post</a>
                     </div>
                 </div>
             </div >

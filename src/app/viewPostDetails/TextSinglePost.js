@@ -38,7 +38,7 @@ class TextSinglePost extends React.Component {
 
     deletePost = () => {
         fetchDeletePost(this.props.data)
-            .then(() => window.location.replace(`http://localhost:3000/#/`))
+            .then(() => window.location.replace(`http://localhost:3001/#/`))
     }
 
 

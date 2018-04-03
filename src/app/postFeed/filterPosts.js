@@ -11,9 +11,9 @@ const FilterFeed = (props) => {
 
 
                 <ul id='dropdown1' className='dropdown-content'>
-                    <li onClick={props.showFiltered} data-type="text">Only Text Posts</li>
-                    <li onClick={props.showFiltered} data-type="image">Only Image Posts</li>
-                    <li onClick={props.showFiltered} data-type="video">Only Video Posts</li>
+                    <li onClick={props.showFiltered} data-type="text">Texts </li>
+                    <li onClick={props.showFiltered} data-type="image">Images</li>
+                    <li onClick={props.showFiltered} data-type="video">Videos</li>
                     <li onClick={props.showFiltered} data-type="all">All</li>
 
                 </ul>
