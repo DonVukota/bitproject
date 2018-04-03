@@ -9,7 +9,7 @@ import { MyProfilePage } from './app/myProfile/MyProfilePage'
 import { UsersPage } from './app/peoplePage/UsersPage'
 import { SearchPeople } from "./app/peoplePage/SearchPeople"
 import { UsersProfilePage } from './app/peoplePage/UsersProfilePage';
-
+import { LoginRegister } from './app/myProfile/LogRegPage'
 
 
 class App extends Component {
@@ -21,6 +21,7 @@ class App extends Component {
       <React.Fragment>
         <Header />
         <Switch>
+          <Route exact path='/LoginRegister' component={LoginRegister} />
           <Route exact path='/' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
           <Route exact path='/MyProfile/' component={MyProfilePage} />
