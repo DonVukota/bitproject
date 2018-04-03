@@ -49,12 +49,6 @@ class FeedPage extends React.Component {
             fetchCreateTextPost(postInputData).then(() => this.getFeedData());
             // .then(this.getFeedData())
         }
-
-        // location.replace("http://localhost:3000/#/")
-
-        // console.log(postInputData);
-        // user fetch service to create post
-        // fetch new post list (refresh list not page!!!!)
     }
 
     showFiltered = (event) => {
