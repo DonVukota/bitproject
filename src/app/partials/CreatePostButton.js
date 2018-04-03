@@ -107,20 +107,7 @@ class CreatePostButton extends React.Component {
 
             <div className="row">
 
-                {/* <div className="col s6 offset-s3">
-                    <div className="card blue-grey darken-1">
-                        <div className="card-content white-text">
-                            <span className="card-title">Card Title</span>
-                            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div className="card-action">
-                            <a>This is a link</a>
-                            <a>This is a link</a>
-                        </div>
-                    </div>
-                </div> */}
-
+ 
 
 
                 <div className="fixed-action-btn horizontal click-to-toggle">
@@ -134,81 +121,13 @@ class CreatePostButton extends React.Component {
                     </ul>
                 </div>
 
-<<<<<<< HEAD
 
-                <div id="modalVideo" className="modal ">
-                    <div className="modal-content">
-                        <h4>New Video Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-
-                                    <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
-                                    <label htmlFor="textarea1" value="iuygigiug" >URL</label>
-                                    <p> {this.state.error}</p>
-                                </div>
-
-
-                            </form>
-                        </div>
-
-                    </div>
-                    <div className="modal-footer">
-
-                        <p className="modal-action modal-close btn-flat btn" onClick={this.createPost}>Post</p>
-                    </div>
-                </div>
-
-
-                <div id="modalImage" className="modal">
-                    <div className="modal-content">
-                        <h4>New Image Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="image" className="materialize-textarea"></textarea>
-                                        <label htmlFor="textarea1">URL</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <div className="modal-footer">
-
-                        <a href="#!" className="modal-action modal-close waves-effect waves-grey btn-flat btn" onClick={this.createPost}>Post</a>
-                    </div>
-                </div>
-                <div id="modalPost" className="modal">
-                    <div className="modal-content">
-                        <h4>New Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="text" className="materialize-textarea"></textarea>
-                                        <label htmlFor="textarea1">What's up?</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-
-                    <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close btn btn-flat" onClick={this.createPost}>Post</a>
-                    </div>
-                </div>
-            </div >
-=======
             <VideoModal onVideoChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
             <ImgModal onImageChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
             <TextModal  onTextChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
                
                
             </div>
->>>>>>> c7afcd7b99bbf0ad4321db772600fecdeb10151c
         )
     }
 }
