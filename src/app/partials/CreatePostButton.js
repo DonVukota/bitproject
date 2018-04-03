@@ -1,6 +1,8 @@
 import React from 'react'
 import M from "materialize-css"
-
+import {VideoModal} from "../modals/VideoModal"
+import {ImgModal} from "../modals/ImgModal"
+import {TextModal} from "../modals/TextModal"
 class CreatePostButton extends React.Component {
     constructor(props) {
         super(props)
@@ -78,6 +80,8 @@ class CreatePostButton extends React.Component {
             this.checkVideoUrl(postData)
         } else if (postData.type === "image") {
             this.checkImageUrl(postData)
+        }else if(postData.type === "text"){
+            this.props.onCreatePost(postData)
         }
 
         this.setState({
@@ -130,72 +134,12 @@ class CreatePostButton extends React.Component {
                     </ul>
                 </div>
 
-
-                <div id="modalVideo" className="modal">
-                    <div className="modal-content">
-                        <h4>New Video Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-
-                                    <textarea onChange={this.onValueChange} value={this.state.value} data-type="video" className="materialize-textarea video-make-post" ></textarea>
-                                    <label htmlFor="textarea1" value="iuygigiug" >URL</label>
-                                    <p> {this.state.error}</p>
-                                </div>
-
-
-                            </form>
-                        </div>
-
-                    </div>
-                    <div className="modal-footer">
-
-                        <p className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</p>
-                    </div>
-                </div>
-
-
-                <div id="modalImage" className="modal">
-                    <div className="modal-content">
-                        <h4>New Image Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="image" className="materialize-textarea"></textarea>
-                                        <label htmlFor="textarea1">URL</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                    <div className="modal-footer">
-
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
-                    </div>
-                </div>
-                <div id="modalPost" className="modal">
-                    <div className="modal-content">
-                        <h4>New Post</h4>
-                        <div className="row">
-                            <form className="col s12">
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <textarea onChange={this.onValueChange} value={this.state.value} data-type="text" className="materialize-textarea"></textarea>
-                                        <label htmlFor="textarea1">What's up?</label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-
-                    <div className="modal-footer">
-                        <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat" onClick={this.createPost}>Post</a>
-                    </div>
-                </div>
-            </div >
+            <VideoModal onVideoChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+            <ImgModal onImageChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+            <TextModal  onTextChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
+               
+               
+            </div>
         )
     }
 }
