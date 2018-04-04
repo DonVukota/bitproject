@@ -5,8 +5,8 @@ import { EditProfilePage } from './EditProfilePage'
 import { fetchEditProfile } from "../services/fetchEditProfile"
 class MyProfilePage extends React.Component {
 
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             userId: 0,
             name: "",
@@ -14,8 +14,8 @@ class MyProfilePage extends React.Component {
             aboutShort: "",
             about: "",
             avatarUrl: "",
-            postsCount: this.props.data,
-            commentsCount: this.props.data,
+            postsCount: "",
+            commentsCount: ""
 
 
         }

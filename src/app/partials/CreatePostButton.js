@@ -1,8 +1,8 @@
 import React from 'react'
 import M from "materialize-css"
-import {VideoModal} from "../modals/VideoModal"
-import {ImgModal} from "../modals/ImgModal"
-import {TextModal} from "../modals/TextModal"
+import { VideoModal } from "../modals/VideoModal"
+import { ImgModal } from "../modals/ImgModal"
+import { TextModal } from "../modals/TextModal"
 class CreatePostButton extends React.Component {
     constructor(props) {
         super(props)
@@ -44,16 +44,10 @@ class CreatePostButton extends React.Component {
                 this.props.onCreatePost(postData)
 
             } else {
-                this.setState({
-                    error: "Video Link is invalid",
-                    value: ""
-                })
+                alert("Video link not Support!!!")
             }
         } else {
-            this.setState({
-                error: "Video Link is invalid",
-                value: ""
-            })
+            alert("Video link not Support!!!")
         }
     }
 
@@ -80,7 +74,7 @@ class CreatePostButton extends React.Component {
             this.checkVideoUrl(postData)
         } else if (postData.type === "image") {
             this.checkImageUrl(postData)
-        }else if(postData.type === "text"){
+        } else if (postData.type === "text") {
             this.props.onCreatePost(postData)
         }
 
@@ -107,7 +101,7 @@ class CreatePostButton extends React.Component {
 
             <div className="row">
 
- 
+
 
 
                 <div className="fixed-action-btn horizontal click-to-toggle">
@@ -122,11 +116,11 @@ class CreatePostButton extends React.Component {
                 </div>
 
 
-            <VideoModal onVideoChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
-            <ImgModal onImageChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
-            <TextModal  onTextChange={this.onValueChange} value={this.state.value} postPost={this.createPost}/>
-               
-               
+                <VideoModal onVideoChange={this.onValueChange} value={this.state.value} postPost={this.createPost} />
+                <ImgModal onImageChange={this.onValueChange} value={this.state.value} postPost={this.createPost} />
+                <TextModal onTextChange={this.onValueChange} value={this.state.value} postPost={this.createPost} />
+
+
             </div>
         )
     }
