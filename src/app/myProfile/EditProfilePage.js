@@ -7,9 +7,9 @@ class EditProfilePage extends React.Component {
         super(props)
 
         this.state = {
-            fullNameEdited: this.props.name,
-            descriptionEdited: this.props.aboutShort,
-            imgUrlUpdate: this.props.avatarUrl,
+            fullNameEdited: "",
+            descriptionEdited: "",
+            imgUrlUpdate: "",
 
         }
     }

@@ -7,7 +7,7 @@ class LoginRegister extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            isRegistered: true
+            isRegistered: false
         }
     }
 
@@ -45,9 +45,9 @@ class LoginRegister extends React.Component {
                 <div className="container row">
                     <div className="col s6 offset-s6">
                         <div className="row">
-                            <p class="waves-effect waves-light btn col s5" onClick={this.logInDisplay}>Log In</p>
+                            <p class="waves-effect waves-light btn col s5 " onClick={this.logInDisplay}>Log In</p>
                             <p class="waves-effect waves-light btn col s5 offset-2" onClick={this.registerDisplay}>Register</p>
-                            <div className="row">
+                            <div className="row card">
                                 {this.checkRegistration()}
                             </div>
                         </div>

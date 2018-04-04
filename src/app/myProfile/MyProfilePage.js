@@ -37,7 +37,7 @@ class MyProfilePage extends React.Component {
     }
 
     onUpdateProfile = (fullName, description, imgUrlUpdate) => {
-        fetchEditProfile(fullName = "Superman", description = "Superman is a fictional superhero appearing in American comic books published by DC Comics", imgUrlUpdate = "https://vignette.wikia.nocookie.net/superman/images/b/b1/Superman_Action_976_Gary_Frank.png/revision/latest/scale-to-width-down/288?cb=20170501140424", "bla", 'neBla@com').then(() => this.getFeedData())
+        fetchEditProfile(fullName, description, imgUrlUpdate, "bla", 'neBla@com').then(() => this.getFeedData())
     }
 
     componentDidMount() {
