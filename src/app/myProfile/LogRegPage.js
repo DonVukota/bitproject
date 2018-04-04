@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import M from "materialize-css";
 import { Register } from "./RegisterComponent";
 import { LogIn } from "./LogInComponent";
-
+import { RegisterForm } from "../services/register";
 class LoginRegister extends React.Component {
     constructor(props) {
         super(props)
@@ -11,6 +11,12 @@ class LoginRegister extends React.Component {
         }
     }
 
+    registerUser = (username, password, name, email) => {
+
+        RegisterForm(username, password, name, email).then(response => response).then(response => console.log(response))
+
+
+    }
 
     registerDisplay = () => {
         this.setState({
@@ -27,10 +33,10 @@ class LoginRegister extends React.Component {
     checkRegistration = () => {
         if (this.state.isRegistered) {
             return (
-                <Register />
+                <Register registerUser={this.registerUser} />
             )
         } else {
-            return (<LogIn />)
+            return (<LogIn logInUser={this.logInUser} />)
         }
 
     }
