@@ -65,13 +65,13 @@ class FeedPage extends React.Component {
     }
 
 
-
     render() {
         return (
             <main>
                 <FilterFeed showFiltered={this.showFiltered} />
                 <div className=" container mainFeed ">
                     <div className="row">
+
                         {this.state.filteredPosts.map((postProperties, index) => {
                             if (postProperties.type === "video") {
                                 return <VideoPost data={postProperties} key={index} />
@@ -82,6 +82,7 @@ class FeedPage extends React.Component {
                             } return <h1> LOADING...</h1>
 
                         })}
+
                         <CreatePostButton onCreatePost={this.createPost} />
 
                     </div>

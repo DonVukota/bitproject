@@ -22,6 +22,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/LoginRegister' component={LoginRegister} />
+          
           <Route exact path='/' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
           <Route exact path='/MyProfile/' component={MyProfilePage} />
