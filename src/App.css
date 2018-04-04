@@ -36,10 +36,12 @@
   margin-bottom: 10%;
   width: 50%;
   margin: 0 auto;
-  background-color: white;
+  color: white;
   -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
   -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
   box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  background-image: url("https://atgbcentral.com/data/out/23/4086081-earth-from-space.jpg");
+  background-attachment: fixed;
 }
 
 .profileImg {
@@ -53,7 +55,6 @@
 }
 
 .aboutSection {
-  background-color: white;
   z-index: 1;
   margin: 0;
   padding: 10px;
@@ -70,32 +71,38 @@
 }
 
 .headCss {
-  background-image: url("http://talent.vonazon.com/wp-content/uploads/2016/05/starry-night-4k-wallpaper.jpg");
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1357&q=80");
   background-color: rgb(4, 204, 47);
   margin-bottom: 2%;
 }
 
 .videoCard {
   margin-top: 10px;
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1357&q=80");
 }
 
 .imageCard {
   margin-top: 10px;
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1357&q=80");
 }
 
 .postCard {
   margin-top: 20px;
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1357&q=80");
 }
 
 .card {
-  background-color: #424342 !important;
-  -webkit-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
-  -moz-box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
-  box-shadow: 6px 7px 25px -5px rgba(15, 15, 15, 1) !important;
+  background-color: black !important;
+  -webkit-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  -moz-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
 }
 
 .card-action {
   color: white;
+  -webkit-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  -moz-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
 }
 
 a {
@@ -163,10 +170,13 @@ a {
 
 .abcd {
   padding: 2%;
-  background-color: grey;
+  background-color: black;
   left: 18%;
   position: relative;
   width: 100%;
+  -webkit-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  -moz-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
 }
 
 .textColor {
@@ -234,7 +244,11 @@ p {
 }
 
 .btn {
-  background-color: grey !important;
+  background-color: black !important;
+  -webkit-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  -moz-box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  box-shadow: inset 0px 0px 54px 3px rgba(101, 113, 245, 1) !important;
+  border-radius: 50px !important;
 }
 
 .proba {
@@ -262,7 +276,7 @@ p {
   background-color: rgb(1, 224, 49) !important;
   min-height: 70px;
   margin-top: 5%;
-  background-image: url("http://hdgifs.com/wp-content/uploads/2017/01/dscovrepicmoontransitfull.gif");
+  background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1357&q=80");
 }
 
 body {
@@ -273,7 +287,8 @@ body {
 }
 
 .container.mainFeed {
-  background-image: url("http://www.wallpapers4u.org/wp-content/uploads/park_lawn_grass_trees_sun_15215_1920x1080.jpg");
+  background-image: url("https://media3.giphy.com/media/qRY3cPYRkyQh2/giphy.gif");
+  background-size: contain;
   background-attachment: fixed;
   margin-top: 80px;
   margin-bottom: 20px;

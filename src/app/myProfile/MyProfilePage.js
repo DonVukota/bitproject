@@ -37,7 +37,7 @@ class MyProfilePage extends React.Component {
     }
 
     onUpdateProfile = (fullName, description, imgUrlUpdate) => {
-        fetchEditProfile(fullName, description, imgUrlUpdate, "bla", 'neBla@com').then(() => this.getFeedData())
+        fetchEditProfile(fullName, description, imgUrlUpdate, "NijeViseBla", 'neBla@com').then(() => this.getFeedData())
     }
 
     componentDidMount() {

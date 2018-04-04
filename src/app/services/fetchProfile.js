@@ -9,9 +9,8 @@ export const fetchProfile = () => {
         },
         method: 'GET'
     })
+
         .then((response) => {
             return response.json();
         })
 }
-
-
