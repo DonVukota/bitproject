@@ -21,7 +21,8 @@ const ImgModal = (props) => {
             <div className="modal-footer">
 
                 <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat btn" onClick={props.postPost}>Post</a>
-            </div></div>
+            </div>
+        </div>
 
     )
 }
