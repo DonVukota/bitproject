@@ -8,7 +8,7 @@ class TextPost extends React.Component {
         return (
 
             <Link to={`PostDetails/${this.props.data.id}/text`}>
-                <div className="row">
+                <div className=" row">
                     <div className="col s6 offset-s3">
 
                         <div className="card ">

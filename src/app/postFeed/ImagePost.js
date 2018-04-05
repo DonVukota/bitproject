@@ -8,7 +8,7 @@ class ImagePost extends React.Component {
 
         return (
             <Link to={`PostDetails/${this.props.data.id}/image`}>
-                <div className="videoPost">
+                <div className=" videoPost">
                     <div className="col s6 offset-s3">
                         <div className="card  ">
                             <div className="card-content white-text imageCard">

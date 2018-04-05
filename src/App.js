@@ -11,7 +11,6 @@ import { SearchPeople } from "./app/peoplePage/SearchPeople"
 import { UsersProfilePage } from './app/peoplePage/UsersProfilePage';
 import { LoginRegister } from './app/myProfile/LogRegPage'
 
-
 class App extends Component {
   render() {
     return (
@@ -22,7 +21,6 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path='/' component={LoginRegister} />
-
           <Route exact path='/FeedPage' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
           <Route exact path='/MyProfile/' component={MyProfilePage} />
