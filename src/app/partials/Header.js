@@ -17,7 +17,7 @@ class Header extends React.Component {
             <header >
                 <nav>
                     <div className="nav-wrapper headCss">
-                        <a id="logoc" className="brand-logo">BitBook</a>
+                        <a id="logoc" className="brand-logo">SpaceBook</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to='/FeedPage' id="feed">Feed</Link></li>
                             <li ><Link to='/People' id="peoplec">People</Link></li>
