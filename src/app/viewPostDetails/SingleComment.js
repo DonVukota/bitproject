@@ -12,7 +12,8 @@ class SingleComment extends React.Component {
         }
     }
     getFeedData() {
-        fetchProfile()
+        const sessionId = localStorage.getItem("sessionId")
+        fetchProfile(sessionId)
             .then((fetchedData) => {
                 this.setState({
                     avatarUrl: fetchedData.avatarUrl,

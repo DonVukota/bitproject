@@ -19,7 +19,8 @@ class VideoSinglePost extends React.Component {
 
 
     getFeedData() {
-        getSingleVideoPost(this.props.data)
+        const sessionId = localStorage.getItem("sessionId")
+        getSingleVideoPost(this.props.data, sessionId)
             .then((fetchedData) => {
 
                 this.setState({
@@ -40,8 +41,9 @@ class VideoSinglePost extends React.Component {
         return embededUrl
     }
     deletePost = () => {
-        fetchDeletePost(this.props.data)
-            .then(() => window.location.replace(`http://localhost:3001/#/`))
+        const sessionId = localStorage.getItem("sessionId")
+        fetchDeletePost(this.props.data, sessionId)
+            .then(() => window.location.replace(`http://localhost:3000/#/`))
     }
 
 

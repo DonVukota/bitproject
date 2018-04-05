@@ -19,7 +19,8 @@ class TextSinglePost extends React.Component {
 
 
     getFeedData() {
-        getSingleTextPost(this.props.data)
+        const sessionId = localStorage.getItem("sessionId")
+        getSingleTextPost(this.props.data, sessionId)
             .then((fetchedData) => {
 
                 this.setState({
@@ -37,8 +38,9 @@ class TextSinglePost extends React.Component {
     }
 
     deletePost = () => {
-        fetchDeletePost(this.props.data)
-            .then(() => window.location.replace(`http://localhost:3001/#/`))
+        const sessionId = localStorage.getItem("sessionId")
+        fetchDeletePost(this.props.data, sessionId)
+            .then(() => window.location.replace(`http://localhost:3000/#/`))
     }
 
 

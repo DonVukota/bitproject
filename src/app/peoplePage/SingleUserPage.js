@@ -24,7 +24,8 @@ class SingleUserProfilePage extends React.Component {
     }
 
     getFeedData() {
-        fetchSingleUserById(this.props.match.params.id)
+        const sessionId = localStorage.getItem("sessionId")
+        fetchSingleUserById(this.props.match.params.id, sessionId)
             .then((fetchedData) => {
                 this.setState({
                     userId: fetchedData.userId,
@@ -39,7 +40,8 @@ class SingleUserProfilePage extends React.Component {
     }
 
     onUpdateProfile = (fullName, description, imgUrlUpdate) => {
-        fetchEditProfile(fullName, description, imgUrlUpdate, "bla", 'neBla@com').then(() => this.getFeedData())
+        const sessionId = localStorage.getItem("sessionId")
+        fetchEditProfile(fullName, description, imgUrlUpdate, "bla", 'neBla@com', sessionId).then(() => this.getFeedData())
     }
 
     componentDidMount() {

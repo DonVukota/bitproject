@@ -16,7 +16,8 @@ class Comment extends React.Component {
     }
 
     getFeedData() {
-        getCommentsByPostId(this.props.postId)
+        const sessionId = localStorage.getItem("sessionId")
+        getCommentsByPostId(this.props.postId, sessionId)
             .then((commentsList) => {
                 this.setState({
                     listOfComments: commentsList.reverse()
@@ -31,7 +32,8 @@ class Comment extends React.Component {
     }
 
     createComment = (commentBody) => {
-        fetchCreateComment(commentBody, this.props.postId)
+        const sessionId = localStorage.getItem("sessionId")
+        fetchCreateComment(commentBody, this.props.postId, sessionId)
             .then(() => this.getFeedData())
     }
     render() {

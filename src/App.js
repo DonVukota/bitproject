@@ -21,9 +21,9 @@ class App extends Component {
       <React.Fragment>
         <Header />
         <Switch>
-          <Route exact path='/LoginRegister' component={LoginRegister} />
-          
-          <Route exact path='/' component={FeedPage} />
+          <Route exact path='/' component={LoginRegister} />
+
+          <Route exact path='/FeedPage' component={FeedPage} />
           <Route exact path='/PostDetails/:id/:type' component={ViewPostDetails} />
           <Route exact path='/MyProfile/' component={MyProfilePage} />
           <Route exact path='/People/' component={UsersPage} />

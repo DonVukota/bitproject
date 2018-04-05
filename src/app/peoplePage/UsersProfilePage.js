@@ -21,7 +21,8 @@ class UsersProfilePage extends React.Component {
     }
 
     getFeedData() {
-        fetchUserDetails(this.props.match.params.UserId)
+        const sessionId = localStorage.getItem("sessionId")
+        fetchUserDetails(this.props.match.params.UserId,sessionId)
             .then((fetchedData) => {
                 this.setState({
                     userId: fetchedData.userId,

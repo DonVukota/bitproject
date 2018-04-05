@@ -19,7 +19,8 @@ class ImageSinglePost extends React.Component {
 
 
     getFeedData() {
-        getSingleImagePost(this.props.data)
+        const sessionId = localStorage.getItem("sessionId")
+        getSingleImagePost(this.props.data, sessionId)
             .then((fetchedData) => {
 
                 this.setState({
@@ -37,8 +38,9 @@ class ImageSinglePost extends React.Component {
     }
 
     deletePost = () => {
-        fetchDeletePost(this.props.data)
-            .then(() => window.location.replace(`http://localhost:3001/#/`))
+        const sessionId = localStorage.getItem("sessionId")
+        fetchDeletePost(this.props.data, sessionId)
+            .then(() => window.location.replace(`http://localhost:3000/#/`))
     }
 
 

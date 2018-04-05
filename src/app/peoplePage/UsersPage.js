@@ -15,12 +15,14 @@ class UsersPage extends React.Component {
     }
 
     getFeedData() {
-        fetchUsers(this.props.postId)
+        const sessionId = localStorage.getItem("sessionId")
+        fetchUsers(sessionId)
             .then((userList) => {
                 this.setState({
                     listOfUsers: userList,
                     filteredUsers: userList
                 })
+                console.log(userList)
             })
     }
 

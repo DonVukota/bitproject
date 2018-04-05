@@ -3,6 +3,7 @@ import M from "materialize-css";
 import { Register } from "./RegisterComponent";
 import { LogIn } from "./LogInComponent";
 import { RegisterForm } from "../services/register";
+import { fetchLogIn } from "../services/fetchLogIn";
 class LoginRegister extends React.Component {
     constructor(props) {
         super(props)
@@ -16,6 +17,11 @@ class LoginRegister extends React.Component {
         RegisterForm(username, password, name, email).then(response => response).then(response => console.log(response))
 
 
+    }
+    logInUser = (username, password) => {
+        fetchLogIn(username, password).then(response => response.json())
+            .then(user => localStorage.setItem("sessionId", user.sessionId))
+            .then(function () { window.location.replace(`http://localhost:3000/#/FeedPage`) }, 0)
     }
 
     registerDisplay = () => {

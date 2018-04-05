@@ -9,7 +9,6 @@ class InputComment extends React.Component {
     }
     sendInputDataForComment = (event) => {
         event.preventDefault();
-
         const commentBody = this.state.inputBodyValue
         this.props.createComment(commentBody)
 

@@ -22,7 +22,8 @@ class MyProfilePage extends React.Component {
     }
 
     getFeedData() {
-        fetchProfile()
+        const sessionId = localStorage.getItem("sessionId")
+        fetchProfile(sessionId)
             .then((fetchedData) => {
                 this.setState({
                     userId: fetchedData.userId,
@@ -37,7 +38,8 @@ class MyProfilePage extends React.Component {
     }
 
     onUpdateProfile = (fullName, description, imgUrlUpdate) => {
-        fetchEditProfile(fullName, description, imgUrlUpdate, "NijeViseBla", 'neBla@com').then(() => this.getFeedData())
+        const sessionId = localStorage.getItem("sessionId")
+        fetchEditProfile(fullName, description, imgUrlUpdate, "NijeViseBla", 'neBla@com', sessionId).then(() => this.getFeedData())
     }
 
     componentDidMount() {

@@ -23,7 +23,8 @@ class FeedPage extends React.Component {
     }
 
     getFeedData() {
-        getListOfLastPosts()
+        const sessionId = localStorage.getItem("sessionId")
+        getListOfLastPosts(sessionId)
             .then((fetchedData) => {
                 this.setState({
                     listOfLastPosts: fetchedData,
@@ -39,14 +40,15 @@ class FeedPage extends React.Component {
     }
 
     createPost = (postInputData) => {
+        const sessionId = localStorage.getItem("sessionId")
         if (postInputData.type === 'video') {
-            fetchCreateVideoPost(postInputData).then(() => this.getFeedData());
+            fetchCreateVideoPost(postInputData, sessionId).then(() => this.getFeedData());
             // .then(this.getFeedData());
         } else if (postInputData.type === 'image') {
-            fetchCreateImagePost(postInputData).then(() => this.getFeedData());
+            fetchCreateImagePost(postInputData, sessionId).then(() => this.getFeedData());
             // .then(this.getFeedData())
         } else if (postInputData.type === 'text') {
-            fetchCreateTextPost(postInputData).then(() => this.getFeedData());
+            fetchCreateTextPost(postInputData, sessionId).then(() => this.getFeedData());
             // .then(this.getFeedData())
         }
     }
