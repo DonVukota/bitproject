@@ -21,7 +21,7 @@ class LoginRegister extends React.Component {
     logInUser = (username, password) => {
         fetchLogIn(username, password).then(response => response.json())
             .then(user => localStorage.setItem("sessionId", user.sessionId))
-            .then(function () { window.location.replace(`http://localhost:3000/#/FeedPage`) }, 0)
+            .then(function () { window.location.replace(`#/FeedPage`) }, 0)
     }
 
     registerDisplay = () => {
