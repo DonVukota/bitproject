@@ -70,8 +70,6 @@ class FeedPage extends React.Component {
     render() {
         return (
             <main>
-                <audio id="audio" autoPlay loop src="thunder.mp3" />
-                <audio id="audio" autoPlay loop src="kise.mp3" />
                 <FilterFeed showFiltered={this.showFiltered} />
                 <div className=" container mainFeed ">
                     <div className="row">
